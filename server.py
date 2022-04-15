@@ -8,7 +8,7 @@ app = Flask(__name__)
 def homepage():
     return render_template('index.html')
 
-@app.route('/learn/')
+@app.route('/learn/<l>')
 def learn():
     pass
 

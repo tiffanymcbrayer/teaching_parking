@@ -1,3 +1,9 @@
-.black{
-  color: black;
+.white{
+  color: white;
+}
+.bk-white{
+  background-color: white;
+}
+.bk-base{
+  background-color: #1c78ef;
 }

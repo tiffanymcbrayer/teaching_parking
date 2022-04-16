@@ -7,3 +7,20 @@
 .bk-base{
   background-color: #1c78ef;
 }
+.eachStep{
+  padding: 10px
+}
+.nameTitle{
+  font-size: 30px
+}
+.stepGif {
+  padding:0px;
+  text-align: center;
+}
+.stepName{
+  font-size: 20px
+}
+.fullGif{
+  padding-top: 60px;
+  text-align: center;
+}

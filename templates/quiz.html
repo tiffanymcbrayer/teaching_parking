@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<script type="text/javascript" src="{{ url_for('static', filename = 'quiz.js') }}"></script>
+<script>
+    let q_num = '{{id}}'
+    let response = {{ response|tojson }}
+    let question = {{ question|tojson }}
+</script>
+
+<div class="row">
+Quiz
+</div>
+<div class="row">
+    <div class="col-md-6">
+        <div class="row" id="goal">
+            <span class="bold darkgray">
+                Goal: 
+            </span>
+        </div>
+        <div class="row" id="question"> 
+        </div>
+        <div class="row" id="question-img"> 
+        </div>
+    </div>
+    <div class="col-md-6">
+
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-3">
+        <div class="row" id="A-img">
+        </div>
+        <div class="row" id="A-text"> 
+        </div>
+        <div class="row" id="A-button"> 
+        </div>
+    </div>
+    <div class="col-md-3 ml-5">
+        <div class="row" id="B-img">
+        </div>
+        <div class="row" id="B-text"> 
+        </div>
+        <div class="row" id="B-button"> 
+        </div>
+    </div>
+    <div class="col-md-3 ml-5">
+        <div class="row" id="C-img">
+        </div>
+        <div class="row" id="C-text"> 
+        </div>
+        <div class="row" id="C-button"> 
+        </div>
+    </div>
+</div>
+
+{% endblock %}

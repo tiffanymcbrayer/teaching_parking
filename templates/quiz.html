@@ -3,7 +3,8 @@
 {% block content %}
 <script type="text/javascript" src="{{ url_for('static', filename = 'quiz.js') }}"></script>
 <script>
-    let q_num = '{{id}}'
+    let total = '{{total_num}}'
+    let q_num = '{{q_num}}'
     let response = {{ response|tojson }}
     let question = {{ question|tojson }}
 </script>
@@ -24,7 +25,9 @@ Quiz
         </div>
     </div>
     <div class="col-md-6">
-
+        {% if q_num %}
+            {{q_num}}/{{total_num}}
+        {% endif %}
     </div>
 </div>
 <div class="row">
@@ -33,7 +36,8 @@ Quiz
         </div>
         <div class="row" id="A-text"> 
         </div>
-        <div class="row" id="A-button"> 
+        <div class="row" id="A-button" class="buttons"> 
+            <!-- <button id="A">A</button> -->
         </div>
     </div>
     <div class="col-md-3 ml-5">
@@ -41,7 +45,8 @@ Quiz
         </div>
         <div class="row" id="B-text"> 
         </div>
-        <div class="row" id="B-button"> 
+        <div class="row" id="B-button" class="buttons"> 
+            <!-- <button id="B">B</button>-->
         </div>
     </div>
     <div class="col-md-3 ml-5">
@@ -49,7 +54,8 @@ Quiz
         </div>
         <div class="row" id="C-text"> 
         </div>
-        <div class="row" id="C-button"> 
+        <div class="row" id="C-button" class="buttons"> 
+            <!-- <button id="C">C</button> -->
         </div>
     </div>
 </div>

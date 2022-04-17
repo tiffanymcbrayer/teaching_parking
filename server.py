@@ -111,7 +111,8 @@ questions = {
 response = {
     "num": 0,
     "q_num": [],
-    "ans": []
+    "ans": [],
+    "score": 0
 }
 
 @app.route('/')
@@ -128,14 +129,16 @@ def learn(type = None):
 def quiz(q_num = None):
     global questions
     global response
+    global QUIZ_NUM
 
     if(response["num"] == 0 and q_num.lower() != "start".lower()):
         response = {
             "num": 0,
             "q_num": [],
-            "ans": []
+            "ans": [],
+            "score": 0
         }
-        return render_template('quiz.html', response = response, q_num=None, question=None)
+        return render_template('quiz.html', total_num=QUIZ_NUM, response = response, q_num=None, question=None)
     elif(q_num.lower() == "start".lower()):
         response["num"] = 1
         response["q_num"] = random.sample(range(1, len(questions.keys())+1), QUIZ_NUM)
@@ -152,7 +155,7 @@ def quiz(q_num = None):
             "choice-text": questions[str(q)]["choice-text"],
             "choice-img": questions[str(q)]["choice-img"]
         }
-        return render_template('quiz.html', q_num = q_num, response = response, question=question)
+        return render_template('quiz.html', total_num=QUIZ_NUM, q_num = q_num, response = response, question=question)
 
 ### AJAX CALLS ###
 @app.route('/submit_response', methods=['GET', 'POST'])
@@ -160,8 +163,16 @@ def submit_response():
     global questions
     global response
     json_data = request.get_json()
+    correct_ans = questions[str(response["q_num"][int(json_data['q_num'])-1])]["answer"]
+    response["num"] += 1
+    response["ans"].append(int(json_data['choice']))
+    correct = correct_ans == int(json_data['choice'])
+    if(correct):
+        response["score"] += 1
+    print(correct_ans, correct)
+    print(response)
     # TODO: Add response updating
-    pass
+    return jsonify(response = response, correct=correct)
 
 if __name__ == '__main__':
     app.run(debug = True)

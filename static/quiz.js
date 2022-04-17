@@ -1,9 +1,10 @@
 var NUM_QUESTIONS = 5
-var CHOICES = ["A", "B", "C"]
+var CHOICES = ["A", "B", "C", "D"]
 var dict = {
     "A" : 0,
     "B" : 1,
-    "C" : 2
+    "C" : 2,
+    "D" : 3
 };
 
 $(document).ready(function () {
@@ -16,7 +17,7 @@ $(document).ready(function () {
             contentType: 'application/json, charset=utf-8',
             data : JSON.stringify(c),
             success: function(result){
-                console.log('m')
+                
             },
             error: function(request, status, error){
                 console.log('Error')
@@ -45,7 +46,7 @@ $(document).ready(function () {
             $('#'+choice+"-button").append("<button id='"+choice+"'>"+choice+"</button>")
         })
 
-        $(document).on('click', '#A,#B,#C', function(e){
+        $(document).on('click', '#A,#B,#C,#D', function(e){
             let choice = dict[e.target.id];
             let json_choice = {
                 'q_num': q_num,

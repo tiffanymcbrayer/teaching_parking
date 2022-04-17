@@ -1,12 +1,43 @@
 {% extends "layout.html" %}
 
 {% block content %}
-<script type="text/javascript" src="{{ url_for('static', filename = 'main.js') }}"></script>
 <script>
 </script>
-<div>
-    learn page
-    {{parkingType}}
-    <img src="https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/forward_parking.gif?raw=true">
+<div class = "container">
+    <div class = "row">
+        <div class = "col-md-6">
+            <div class ="nameTitle">
+                {{parkingType.name}}
+            </div>
+        </div>
+    </div>
+    <div class = "row">
+        <div class = "col-md-6">
+            {% for num, step, gif in parkingType.steps %}
+            <div class = "eachStep">
+                <div class = "stepName">
+                    Step {{num}}
+                </div>
+                <div>
+                    {{step}}
+                </div>
+                <div class = "stepGif">
+                    <img src={{gif}}
+                    width = 50%>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <div class = "col-md-6">
+            
+            <div class = "fullGif">
+                <div>
+                    Full Gif
+                </div>
+                <img src={{parkingType.fullGif}}
+                width = 80%>
+            </div>
+        </div>
+    </div>
 </div>
 {% endblock %}

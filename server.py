@@ -154,5 +154,14 @@ def quiz(q_num = None):
         }
         return render_template('quiz.html', q_num = q_num, response = response, question=question)
 
+### AJAX CALLS ###
+@app.route('/submit_response', methods=['GET', 'POST'])
+def submit_response():
+    global questions
+    global response
+    json_data = request.get_json()
+    # TODO: Add response updating
+    pass
+
 if __name__ == '__main__':
     app.run(debug = True)

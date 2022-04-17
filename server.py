@@ -44,65 +44,6 @@ learning = {
     }
 }
 
-
-questions = {
-    "1": {
-        "goal": "Park Forwards",
-        "question": "When should I start turning right?",
-        "question-img" : "", 
-        "choice-num": 3, 
-        "choice-text": ["","", ""],
-        "choice-img": ["https://github.com/tiffanymcbrayer/teaching_parking/blob/a9fed650dad8270a810f5d54597581729caa761a/img/quizPics/q1_a.png?raw=true",
-                       "https://raw.githubusercontent.com/tiffanymcbrayer/teaching_parking/f2eeacb767fdf9ddcc114bfaf388ecbdf09be9bc/img/quizPics/q1_b.png?raw=true", 
-                       "https://raw.githubusercontent.com/tiffanymcbrayer/teaching_parking/f2eeacb767fdf9ddcc114bfaf388ecbdf09be9bc/img/quizPics/q1_c.png?raw=true"],
-        "answer": 2
-    },
-    "2": {
-        "goal": "Park Forwards",
-        "question": "When should I start turning right?",
-        "question-img" : "", 
-        "choice-num": 3, 
-        "choice-text": ["","", ""],
-        "choice-img": ["https://github.com/tiffanymcbrayer/teaching_parking/blob/a9fed650dad8270a810f5d54597581729caa761a/img/quizPics/q1_a.png?raw=true",
-                       "https://raw.githubusercontent.com/tiffanymcbrayer/teaching_parking/f2eeacb767fdf9ddcc114bfaf388ecbdf09be9bc/img/quizPics/q1_b.png?raw=true", 
-                       "https://raw.githubusercontent.com/tiffanymcbrayer/teaching_parking/f2eeacb767fdf9ddcc114bfaf388ecbdf09be9bc/img/quizPics/q1_c.png?raw=true"],
-        "answer": 2
-    },
-    "3": {
-        "goal": "Park Forwards",
-        "question": "When should I start turning right?",
-        "question-img" : "", 
-        "choice-num": 3, 
-        "choice-text": ["","",""],
-        "choice-img": ["https://github.com/tiffanymcbrayer/teaching_parking/blob/a9fed650dad8270a810f5d54597581729caa761a/img/quizPics/q1_a.png?raw=true",
-                       "https://raw.githubusercontent.com/tiffanymcbrayer/teaching_parking/f2eeacb767fdf9ddcc114bfaf388ecbdf09be9bc/img/quizPics/q1_b.png?raw=true", 
-                       "https://raw.githubusercontent.com/tiffanymcbrayer/teaching_parking/f2eeacb767fdf9ddcc114bfaf388ecbdf09be9bc/img/quizPics/q1_c.png?raw=true"],
-        "answer": 2
-    },
-    "4": {
-        "goal": "Park Forwards",
-        "question": "When should I start turning right?",
-        "question-img" : "", 
-        "choice-num": 3, 
-        "choice-text": ["","", ""],
-        "choice-img": ["https://github.com/tiffanymcbrayer/teaching_parking/blob/a9fed650dad8270a810f5d54597581729caa761a/img/quizPics/q1_a.png?raw=true",
-                       "https://raw.githubusercontent.com/tiffanymcbrayer/teaching_parking/f2eeacb767fdf9ddcc114bfaf388ecbdf09be9bc/img/quizPics/q1_b.png?raw=true", 
-                       "https://raw.githubusercontent.com/tiffanymcbrayer/teaching_parking/f2eeacb767fdf9ddcc114bfaf388ecbdf09be9bc/img/quizPics/q1_c.png?raw=true"],
-        "answer": 2
-    },
-    "5": {
-        "goal": "Park Forwards",
-        "question": "When should I start turning right?",
-        "question-img" : "", 
-        "choice-num": 3, 
-        "choice-text": ["","", ""],
-        "choice-img": ["https://github.com/tiffanymcbrayer/teaching_parking/blob/a9fed650dad8270a810f5d54597581729caa761a/img/quizPics/q1_a.png?raw=true",
-                       "https://raw.githubusercontent.com/tiffanymcbrayer/teaching_parking/f2eeacb767fdf9ddcc114bfaf388ecbdf09be9bc/img/quizPics/q1_b.png?raw=true", 
-                       "https://raw.githubusercontent.com/tiffanymcbrayer/teaching_parking/f2eeacb767fdf9ddcc114bfaf388ecbdf09be9bc/img/quizPics/q1_c.png?raw=true"],
-        "answer": 2
-    }
-}
-
 questions = {
     "1": {
         "goal": "park forwards",
@@ -114,7 +55,7 @@ questions = {
                        "https://github.com/tiffanymcbrayer/teaching_parking/blob/Tiffany/img/quizPics/q1_b.png?raw=true",
                        "https://github.com/tiffanymcbrayer/teaching_parking/blob/Tiffany/img/quizPics/q1_c.png?raw=true"],
         "answer": 0,
-        "answer-img": "https://github.com/tiffanymcbrayer/teaching_parking/blob/Tiffany/img/quizPics/q1_asw.gif?raw=true"
+        "answer-img": "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/quizPics/q1_asw.gif?raw=true"
     },
     "2": {
         "goal": "park backwards",
@@ -127,7 +68,7 @@ questions = {
                        "https://github.com/tiffanymcbrayer/teaching_parking/blob/Tiffany/img/quizPics/q2_c.png?raw=true",
                        "https://github.com/tiffanymcbrayer/teaching_parking/blob/Tiffany/img/quizPics/q2_d.png?raw=true"],
         "answer": 1,
-        "answer-img": "https://github.com/tiffanymcbrayer/teaching_parking/blob/Tiffany/img/quizPics/q2_asw.gif?raw=true"
+        "answer-img": "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/quizPics/q2_anw.gif?raw=true"
     },
     "3": {
         "goal": "park angled forwards",
@@ -138,7 +79,7 @@ questions = {
         "choice-img": ["https://github.com/tiffanymcbrayer/teaching_parking/blob/Tiffany/img/quizPics/q3_a.png?raw=true",
                    "https://github.com/tiffanymcbrayer/teaching_parking/blob/Tiffany/img/quizPics/q3_b.png?raw=true"],
         "answer": 1,
-        "answer-img": "https://github.com/tiffanymcbrayer/teaching_parking/blob/Tiffany/img/quizPics/q3_asw.gif?raw=true"
+        "answer-img": "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/quizPics/q3_asw.gif?raw=true"
     },
     "4": {
         "goal": "parallel park",
@@ -150,7 +91,7 @@ questions = {
                        "https://github.com/tiffanymcbrayer/teaching_parking/blob/Tiffany/img/quizPics/q1_b.png?raw=true",
                        "https://github.com/tiffanymcbrayer/teaching_parking/blob/Tiffany/img/quizPics/q1_c.png?raw=true"],
         "answer": 0,
-        "answer-img": "https://github.com/tiffanymcbrayer/teaching_parking/blob/Tiffany/img/quizPics/q1_asw.gif?raw=true"
+        "answer-img": "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/quizPics/q4_asw.gif?raw=true"
     },
     "5": {
         "goal": "parallel park",
@@ -162,7 +103,7 @@ questions = {
                        "https://github.com/tiffanymcbrayer/teaching_parking/blob/Tiffany/img/quizPics/q5_b.png?raw=true",
                        "https://github.com/tiffanymcbrayer/teaching_parking/blob/Tiffany/img/quizPics/q5_c.png?raw=true"],
         "answer": 0,
-        "answer-img": "https://github.com/tiffanymcbrayer/teaching_parking/blob/Tiffany/img/quizPics/q5_asw.gif?raw=true"
+        "answer-img": "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/quizPics/q5_asw.gif?raw=true"
     }
 }
 
@@ -196,13 +137,25 @@ def quiz(q_num = None):
             "ans": [],
             "score": 0
         }
-        return render_template('quiz.html', total_num=QUIZ_NUM, response = response, q_num=None, question=None)
+        return render_template('quiz.html', end=0, total_num=QUIZ_NUM, response = response, q_num=None, question=None)
     elif(q_num.lower() == "start".lower()):
-        response["num"] = 1
-        response["q_num"] = random.sample(range(1, len(questions.keys())+1), QUIZ_NUM)
-        return redirect('/quiz/'+str(response["num"]))
+        if(response["num"]==0):
+            response["num"] = 1
+            response["q_num"] = random.sample(range(1, len(questions.keys())+1), QUIZ_NUM)
+            return redirect('/quiz/'+str(response["num"]))
+        else: 
+            return redirect('/quiz/'+str(response["num"]))
     elif(str(response["num"]) != q_num):
         return redirect('/quiz/'+str(response["num"]))
+    elif(response["num"] > QUIZ_NUM):
+        tmp = response
+        response = {
+            "num": 0,
+            "q_num": [],
+            "ans": [],
+            "score": 0
+        }
+        return render_template("quiz.html", end=1, total_num=QUIZ_NUM, q_num = None, response = tmp, question=None)
     else:
         q = response["q_num"][int(q_num)-1]
         question = {
@@ -213,7 +166,7 @@ def quiz(q_num = None):
             "choice-text": questions[str(q)]["choice-text"],
             "choice-img": questions[str(q)]["choice-img"]
         }
-        return render_template('quiz.html', total_num=QUIZ_NUM, q_num = q_num, response = response, question=question)
+        return render_template('quiz.html', end=0, total_num=QUIZ_NUM, q_num = q_num, response = response, question=question)
 
 ### AJAX CALLS ###
 @app.route('/submit_response', methods=['GET', 'POST'])
@@ -222,13 +175,14 @@ def submit_response():
     global response
     json_data = request.get_json()
     correct_ans = questions[str(response["q_num"][int(json_data['q_num'])-1])]["answer"]
+    correct_img = questions[str(response["q_num"][int(json_data['q_num'])-1])]["answer-img"]
     response["num"] += 1
     response["ans"].append(int(json_data['choice']))
     correct = correct_ans == int(json_data['choice'])
     if(correct):
         response["score"] += 1
     # TODO: Add response updating
-    return jsonify(response = response, correct=correct)
+    return jsonify(response = response, correct=correct, correct_ans=correct_ans, correct_img=correct_img)
 
 if __name__ == '__main__':
     app.run(debug = True)

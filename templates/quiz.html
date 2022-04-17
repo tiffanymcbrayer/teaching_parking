@@ -5,6 +5,8 @@
 <script>
     let total = '{{total_num}}'
     let q_num = '{{q_num}}'
+    let end_quiz = '{{end}}'
+    let QUIZ_NUM = '{{total_num}}'
     let response = {{ response|tojson }}
     let question = {{ question|tojson }}
 </script>
@@ -70,8 +72,11 @@ Quiz
 </div>
 
 <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-5">
         <div id='answer' class="row">
+
+        </div>
+        <div id='answer-img' class="row">
 
         </div>
         <div id='next-button' class="row">

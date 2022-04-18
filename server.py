@@ -84,7 +84,7 @@ questions = {
     },
     "3": {
         "goal": "park angled forwards",
-        "question": "Am I in a good position to turn left and move forwards?",
+        "question": "Am I in a good position to turn right and move forwards?",
         "question-img": "",
         "choice-num": 2,
         "choice-text": ["", ""],
@@ -99,9 +99,9 @@ questions = {
         "question-img": "",
         "choice-num": 3,
         "choice-text": ["", "", ""],
-        "choice-img": ["https://github.com/tiffanymcbrayer/teaching_parking/blob/Tiffany/img/quizPics/q1_a.png?raw=true",
-                       "https://github.com/tiffanymcbrayer/teaching_parking/blob/Tiffany/img/quizPics/q1_b.png?raw=true",
-                       "https://github.com/tiffanymcbrayer/teaching_parking/blob/Tiffany/img/quizPics/q1_c.png?raw=true"],
+        "choice-img": ["https://github.com/tiffanymcbrayer/teaching_parking/blob/Tiffany/img/quizPics/q4_a.png?raw=true",
+                       "https://github.com/tiffanymcbrayer/teaching_parking/blob/Tiffany/img/quizPics/q4_b.png?raw=true",
+                       "https://github.com/tiffanymcbrayer/teaching_parking/blob/Tiffany/img/quizPics/q4_c.png?raw=true"],
         "answer": 0,
         "answer-img": "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/quizPics/q4_asw.gif?raw=true"
     },

@@ -30,7 +30,7 @@ $(document).ready(function () {
 
     if (!question) {
         $('#goal').empty()
-        $('#goal').text("Test your knowledge!")
+        $('#goal').append("<span class='ml-5 stepName'>Test your knowledge!</span>")
         $('#question').append('<button id="start">Start</button>')
 
         $('#start').click(function () {

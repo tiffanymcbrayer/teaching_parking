@@ -21,30 +21,29 @@
 
 <body class="">
 
-  <nav class="navbar navbar-expand-lg navbar-light justify-content-between bk-base nav-fill">
-    <div class="container">
-      <a class='navbar-brand' href='/'><span class='white'>Parking</span></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">Parking Tutorial</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav"
+        aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav mr-auto">
-          <div class="dropdown show">
-            <a class="navbar-text dropdown-toggle ml-5" href="#" role="button" id="dropdownMenuLink"
-              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <span class="white">Learn</span>
-            </a>
-            <div class="dropdown-menu ml-5" aria-labelledby="dropdownMenuLink">
-              <a class="dropdown-item" href="/learn/0">Forwards Parking</a>
-              <a class="dropdown-item" href="/learn/1">Reverse Parking</a>
-              <a class="dropdown-item" href="/learn/2">Angled Parking</a>
-              <a class="dropdown-item" href="/learn/3">Parallel Parking</a>
-            </div>
-          </div>
-          <a class='navbar-text ml-5' href='/quiz/0'><span class='white'>Quiz</span></a>
-        </div>
+      <div class="collapse navbar-collapse" id="main_nav">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link  dropdown-toggle" href="/learn/0" data-bs-toggle="dropdown"> Learn </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="/learn/0">Forwards Parking</a></li>
+              <li><a class="dropdown-item" href="/learn/1">Reverse Parking</a></li>
+              <li><a class="dropdown-item" href="/learn/2">Angled Parking</a></li>
+              <li><a class="dropdown-item" href="/learn/3">Parallel Parking</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"> <a class="nav-link" href="/quiz/0"> Quiz </a> </li>
+        </ul>
       </div>
+    </div>
   </nav>
 
   <div class='container'>

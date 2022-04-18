@@ -5,65 +5,67 @@
 <script>
     let total = '{{total_num}}'
     let q_num = '{{q_num}}'
-    let response = {{ response|tojson }}
-    let question = {{ question|tojson }}
+    let response = {{ response| tojson }}
+    let question = {{ question| tojson }}
 </script>
 
-<div class="row">
-Quiz
+<div class="row nameTitle">
+    Quiz
 </div>
 <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-10">
         <div class="row" id="goal">
-            <span class="bold darkgray">
-                Goal: 
+            <span class="bold darkgray stepName">
+                Goal:
             </span>
         </div>
-        <div class="row" id="question"> 
+        <br>
+        <div class="row" id="question">
         </div>
-        <div class="row" id="question-img"> 
+        <div class="row" id="question-img">
         </div>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-2 stepName">
         {% if q_num %}
-            {{q_num}}/{{total_num}}
+        {{q_num}}/{{total_num}}
         {% endif %}
     </div>
 </div>
+<div class="row"></div>
 <div class="row">
-    <div class="col-md-2">
+    <div class="col-md-3 ml-5">
         <div class="row" id="A-img">
         </div>
-        <div class="row" id="A-text"> 
+        <div class="row" id="A-text">
         </div>
-        <div class="row buttons" id="A-button"> 
+        <div class="row buttons" id="A-button">
             <!-- <button id="A">A</button> -->
         </div>
     </div>
-    <div class="col-md-2 ml-5">
+    <div class="col-md-3 ml-5">
         <div class="row" id="B-img">
         </div>
-        <div class="row" id="B-text"> 
+        <div class="row" id="B-text">
         </div>
-        <div class="row" id="B-button" class="buttons"> 
+        <div class="row buttons" id="B-button">
             <!-- <button id="B">B</button>-->
         </div>
     </div>
-    <div class="col-md-2 ml-5">
+    <div class="col-md-3 ml-5">
         <div class="row" id="C-img">
         </div>
-        <div class="row" id="C-text"> 
+        <div class="row" id="C-text">
         </div>
-        <div class="row buttons" id="C-button"> 
+        <div class="row buttons" id="C-button">
             <!-- <button id="C">C</button> -->
         </div>
     </div>
-    <div class="col-md-2 ml-5">
+    <div class="col-md-3 ml-5">
         <div class="row" id="D-img">
         </div>
-        <div class="row" id="D-text"> 
+        <div class="row" id="D-text">
         </div>
-        <div class="row buttons" id="D-button"> 
+        <div class="row buttons" id="D-button">
             <!-- <button id="C">C</button> -->
         </div>
     </div>
@@ -75,6 +77,7 @@ Quiz
 
         </div>
         <div id='next-button' class="row">
+
         </div>
     </div>
 </div>

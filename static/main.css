@@ -1,26 +1,38 @@
-.white{
+.white {
   color: white;
 }
-.bk-white{
+
+.bk-white {
   background-color: white;
 }
-.bk-base{
+
+.bk-base {
   background-color: #1c78ef;
 }
-.eachStep{
+
+.eachStep {
   padding: 10px
 }
-.nameTitle{
+
+.nameTitle {
   font-size: 30px
 }
+
 .stepGif {
-  padding:0px;
+  padding: 0px;
   text-align: center;
 }
-.stepName{
+
+.stepName {
   font-size: 20px
 }
-.fullGif{
+
+.fullGif {
   padding-top: 60px;
+  text-align: center;
+}
+
+.buttons {
+  padding-top: 20px;
   text-align: center;
 }

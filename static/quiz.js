@@ -10,6 +10,16 @@ var dict = {
     3: "D"
 };
 
+
+function hoverColor(button){
+    $(button).mouseover(function(){
+        button.css('background-color', '#77b5fe'); //how to change back after?
+    });
+    button.mouseout(function(){
+        button.css('background-color', '#007bff'); //how to change back after?
+    });
+}
+
 $(document).ready(function () {
     var submit_answer = function (c) {
         // TODO Finish submit answer
@@ -29,7 +39,13 @@ $(document).ready(function () {
 
                 $('#answer').append("<span class='stepName'>Correct answer is " + dict[result["correct_ans"]] + "</span>")
                 $('#answer-img').append("<img src='" + result["correct_img"] + "' class='img-fluid'>")
-                $('#next-button').append("<button id='next'>Next Question</button>")
+                if((parseInt(q_num) + 1).toString()==6){
+                   $('#next-button').append("<button class = 'quizButtons' id='next'>See Results</button>") 
+                }
+                else{
+                    $('#next-button').append("<button class = 'quizButtons' id='next'>Next Question</button>")
+                }
+                hoverColor($("#next"))
             },
             error: function (request, status, error) {
                 console.log('Error')
@@ -40,16 +56,26 @@ $(document).ready(function () {
         });
     }
     if (end_quiz == 1) {
+        $('#goal').empty()
         $('#goal').append("<span class='stepName'>Score: " + response["score"] + "/" + QUIZ_NUM + "</span>")
-        $('#question').append("<button id='restart'>Try Again</button>")
+        $('#question').append("<button class = 'quizButtons' id='restart'>Try Again</button>")
+        hoverColor($("#restart"))
         $(document).on('click', '#restart', function (e) {
             window.location.href = '/quiz/0'
         });
+
+        $('#question').append("<button class ='quizButtons' id='gohome'>Home</button>")
+        $(document).on('click', '#gohome', function (e) {
+            window.location.href = '/'
+        });
+        hoverColor($("#gohome"))
+
     } else {
         if (!question) {
             $('#goal').empty()
             $('#goal').append("<span class='stepName'>Test your knowledge!</span>")
-            $('#question').append('<button id="start">Start</button>')
+            $('#question').append('<button class = "quizButtons" id="start">Start</button>')
+            hoverColor($("#start"))
 
             $('#start').click(function () {
                 window.location.href = '/quiz/start'

@@ -31,8 +31,16 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-
+function hoverColor(button){
+    $(button).mouseover(function(){
+        button.css('background-color', '#77b5fe'); //how to change back after?
+    });
+    button.mouseout(function(){
+        button.css('background-color', '#007bff'); //how to change back after?
+    });
+}
 
 $(document).ready(function () {
-
+    hoverColor($("#nextl"))
+    hoverColor($("#nextq"))
 })

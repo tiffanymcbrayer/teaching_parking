@@ -1,26 +1,49 @@
-.white{
+.white {
   color: white;
 }
-.bk-white{
+
+.bk-white {
   background-color: white;
 }
-.bk-base{
+
+.bk-base {
   background-color: #1c78ef;
 }
-.eachStep{
+
+.eachStep {
   padding: 10px
 }
-.nameTitle{
+
+.nameTitle {
   font-size: 30px
 }
+
 .stepGif {
-  padding:0px;
+  padding: 0px;
   text-align: center;
 }
-.stepName{
+
+.stepName {
   font-size: 20px
 }
-.fullGif{
+
+.fullGif {
   padding-top: 60px;
   text-align: center;
+}
+
+/* .pd-5 {
+  padding-left: 2px;
+  padding-right: 2px;
+  margin-left: 5px;
+  margin-right: 5px;
+} */
+
+
+.navbar-brand {
+  font-size: 25px !important;
+}
+
+.navbar-text {
+  font-size: 20px !important;
 }

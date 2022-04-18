@@ -40,3 +40,76 @@
 .nav-link {
   font-size: 20px !important;
 }
+
+.start{
+  margin-top: 50px;
+  font-size: 20px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.welcome{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  font-size: 50px;
+}
+
+.homePic{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.startButton{
+  background-color: #007bff;
+  border-radius: 15px;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px;
+  cursor: pointer;
+  border-style: solid; 
+  border-width: 4px;
+  border-color: #808080;
+}
+
+.learnButtons{
+  background-color: #007bff;  
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px;
+  cursor: pointer;
+  border-style: solid; 
+  border-width: 4px;
+  border-color: #808080;
+  border-radius: 15px;
+}
+
+.quizButtons{
+  background-color: #007bff;  
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px;
+  cursor: pointer;
+  border-style: solid; 
+  border-width: 4px;
+  border-color: #808080;
+  border-radius: 15px;
+}

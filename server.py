@@ -84,7 +84,7 @@ questions = {
     },
     "3": {
         "goal": "park angled forwards",
-        "question": "Am I in a good position to turn right and move forwards?",
+        "question": "Which car is in a good position to turn right and move forwards?",
         "question-img": "",
         "choice-num": 2,
         "choice-text": ["", ""],

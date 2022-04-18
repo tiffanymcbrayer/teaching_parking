@@ -4,7 +4,21 @@
 <script type="text/javascript" src="{{ url_for('static', filename = 'main.js') }}"></script>
 <script>
 </script>
-<div>
-    <span class="bold darkgray stepName">Welcome to interactive parking tutorial!</span>
+<div class="row">
+    <div class="col-md-12">
+        <span class="bold darkgray stepName">Welcome to interactive parking tutorial!</span>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-2">
+        <a href='/learn/0'>
+            <button id='next'>Start Learning!</button>
+        </a>
+    </div>
+    <div class="col-md-2">
+        <a href='/quiz/0'>
+            <button id='next'>Start Quiz!</button>
+        </a>
+    </div>
 </div>
 {% endblock %}

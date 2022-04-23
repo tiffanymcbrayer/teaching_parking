@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<script type="text/javascript" src="{{ url_for('static', filename = 'quiz2.js') }}"></script>
+<script>
+    let ordnum = '{{parkingType.ord}}'
+</script>
+<div class="row">
+    <div class="col-md-6">
+        <div class="nameTitle">
+            {{parkingType.name}}
+        </div>
+    </div>
+</div>
+<div class="row nondrop">
+    <div class="bluebox col-5 dropstep drop">
+        <div class="row">
+            <span class="title2">Steps</span>
+        </div>
+    </div>
+    <div class="bluebox col-5 droporder drop">
+        <div class="row">
+            <span class="title2">Order Here</span>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-12">
+
+    <div class="fullGif">
+        <div>
+            Full Gif
+        </div>
+        <img src={{parkingType.fullGif}} width=60%>
+    </div>
+</div>
+</div>
+
+
+<div class="names">
+
+</div>
+
+<div id="records">
+
+</div>
+
+<div class="row">
+    <div class="col-md-2 prev">
+    </div>
+    <div class="col-md-8">
+    </div>
+    <div class="col-md-2 next">
+    </div>
+</div>
+
+{% endblock %}

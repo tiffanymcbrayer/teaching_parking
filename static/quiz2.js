@@ -37,76 +37,36 @@ function hoverColor(button) {
 
 $(document).ready(function () {
 
-    function generateNames() {
-        $(".names").empty()
-        let list = stepnames
-        if (ordernames.length > stepnames.length) {
-            list = ordernames
-        }
 
-
-        $.each(list, function (idx, val) {
-            let lname = ''
-            let rname = ''
-            if (idx < stepnames.length) {
-                lname = '<div class="namebox col-2" data-from="stepname" id="' + idx + '">' + stepnames[idx] + '</div>'
-            }
-            if (idx < ordernames.length) {
-                rname = '<div class="namebox col-2" data-from="ordername" id="' + idx + '">' + ordernames[idx] + '</div>'
-            }
-            let row = '<div class="row"> ' + lname + rname + '</div >'
-            $(".names").append(row)
-            $('.namebox').hover(function () {
-                $(this).css('background-color', 'lightyellow')
-                $(this).css('cursor', 'move')
-            }, function () {
-                $(this).css('background-color', 'white')
-                $(this).css('cursor', 'default')
-            })
-            $('.namebox').draggable({
-                revert: 'invalid',
-                stack: '.namebox',
-                start: function (event, ui) {
-                    console.log($(this).data('from'))
-                    if ($(this).data('from') == 'stepname') {
-                        $('.droporder').css('background-color', '#37839c')
-                    } else {
-                        $('.dropstep').css('background-color', '#37839c')
-                    }
-                },
-                stop: function (event, ui) {
-                    if ($(this).data('from') == 'stepname') {
-                        $('.droporder').css('background-color', 'lightblue')
-                        $('.dropstep').css('background-color', 'lightblue')
-                    } else {
-                        $('.droporder').css('background-color', 'lightblue')
-                        $('.dropstep').css('background-color', 'lightblue')
-                    }
-                }
-            });
-        })
-    }
-    generateNames()
-
-
-    $('.droporder').droppable({
-        tolerance: 'pointer',
-        accept: function (d) {
-            if (d.data('from') == "stepname") {
-                return true
-            }
+    $('.namebox').hover(function () {
+        $(this).css('background-color', 'lightyellow')
+        $(this).css('cursor', 'move')
+    }, function () {
+        $(this).css('background-color', 'white')
+        $(this).css('cursor', 'default')
+    })
+    $('.namebox').draggable({
+        revert: 'invalid',
+        stack: '.namebox',
+        start: function (event, ui) {
+            console.log($(this).data('from'))
+            $('.dropbox').css('background-color', '#37839c')
         },
+        stop: function (event, ui) {
+            $('.dropbox').css('background-color', 'lightgray')
+        },
+
+    });
+
+    $('.dropbox').droppable({
+        tolerance: 'pointer',
+        // accept: function (d) {
+        //     if (d.data('from') == "stepname") {
+        //         return true
+        //     }
+        // },
         drop: function (event, ui) {
-            // console.log($(ui.draggable).attr('id'));
-            let nid = $(ui.draggable).attr('id')
-            let from = $(ui.draggable).data('from')
-            let fromname = stepnames
-            // if (from == "ordername") {
-            //     fromname = ordernames
-            // }
-            let name = fromname.splice(nid, 1)
-            ordernames.push(name)
-            generateNames()
+            $(ui.draggable).detach().css({ top: 0, left: 0 }).appendTo(this);
         },
         over: function (event, ui) {
             $(this).css('background-color', '#114a5e')
@@ -115,33 +75,6 @@ $(document).ready(function () {
             $(this).css('background-color', '#37839c')
         }
     });
-    $('.dropstep').droppable({
-        tolerance: 'pointer',
-        accept: function (d) {
-            if (d.data('from') == "ordername") {
-                return true
-            }
-        },
-        drop: function (event, ui) {
-            // console.log($(ui.draggable).attr('id'));
-            let nid = $(ui.draggable).attr('id')
-            let from = $(ui.draggable).data('from')
-            let fromname = ordernames
-            // if (from == "stepname") {
-            //     fromname = stepnames
-            // }
-            let name = fromname.splice(nid, 1)
-            stepnames.push(name)
-            generateNames()
-        },
-        over: function (event, ui) {
-            $(this).css('background-color', '#114a5e')
-        },
-        out: function (event, ui) {
-            $(this).css('background-color', '#37839c')
-        }
-    });
-
 
     var submit_answer = function (c) {
         // TODO Finish submit answer

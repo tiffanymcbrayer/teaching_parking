@@ -9,20 +9,7 @@ var dict = {
     2: "C",
     3: "D"
 };
-
-var steps = [
-    "Phyllis",
-    "Angela",
-    "Dwight",
-    "Oscar",
-    "Creed",
-    "Pam",
-    "Jim",
-    "Stanley",
-    "Michael",
-    "Kevin",
-    "Kelly"
-]
+var score = 0;
 
 var orders = []
 
@@ -36,7 +23,6 @@ function hoverColor(button) {
 }
 
 $(document).ready(function () {
-
 
     $('.namebox').hover(function () {
         $(this).css('background-color', 'lightyellow')
@@ -55,18 +41,17 @@ $(document).ready(function () {
         stop: function (event, ui) {
             $('.dropbox').css('background-color', 'lightgray')
         },
-
     });
 
     $('.dropbox').droppable({
         tolerance: 'pointer',
-        // accept: function (d) {
-        //     if (d.data('from') == "stepname") {
-        //         return true
-        //     }
-        // },
+
         drop: function (event, ui) {
             $(ui.draggable).detach().css({ top: 0, left: 0 }).appendTo(this);
+            $(this).data("step", $(ui.draggable).data("step"));
+            console.log(this)
+            console.log("Data step " + $(this).data("step"));
+            console.log("Data order " + $(ui.draggable).data("step"));
         },
         over: function (event, ui) {
             $(this).css('background-color', '#114a5e')
@@ -80,27 +65,13 @@ $(document).ready(function () {
         // TODO Finish submit answer
         $.ajax({
             type: 'POST',
-            url: '/submit_response',
+            url: '/submit_response2',
             dataType: 'json',
             contentType: 'application/json, charset=utf-8',
             data: JSON.stringify(c),
             success: function (result) {
-                $('#A,#B,#C,#D').prop("disabled", true);
-                if (result["correct"]) {
-                    $('#' + dict[c["choice"]]).css("background-color", "green")
-                } else {
-                    $('#' + dict[c["choice"]]).css("background-color", "red")
-                }
-
-                $('#answer').append("<span class='stepName'>Correct answer is " + dict[result["correct_ans"]] + "</span>")
-                $('#answer-img').append("<img src='" + result["correct_img"] + "' class='img-fluid'>")
-                if ((parseInt(q_num) + 1).toString() == 6) {
-                    $('#next-button').append("<button class = 'quizButtons' id='next'>See Results</button>")
-                }
-                else {
-                    $('#next-button').append("<button class = 'quizButtons' id='next'>Next Question</button>")
-                }
-                hoverColor($("#next"))
+                console.log(result)
+                score = parseInt(result['response']['score'])
             },
             error: function (request, status, error) {
                 console.log('Error')
@@ -110,4 +81,69 @@ $(document).ready(function () {
             }
         });
     }
+
+    $(document).on('click', '#showresult', function (e) {
+        var allcorrect = true
+        var pass = true
+        console.log("###############################")
+        $('.dropbox').each(function (e) {
+            console.log($(this).data("step"))
+            if (!$(this).data('step')) {
+                pass = false;
+            }
+        })
+        if (pass) {
+            console.log("Page " + ordnum)
+            if ($('#next').length == 0) {
+                $('.buttons').append("<button class='quizButtons' id='next'>Next Question</button>")
+                hoverColor($("#next"))
+            }
+            $('.dropbox').each(function (e) {
+                console.log($(this).data('step'))
+                console.log($(this).data('order'))
+                if ($(this).data("step") == $(this).data("order")) {
+                    $(this).css("background-color", "green")
+                } else {
+                    $(this).css("background-color", "red")
+                    allcorrect = false
+                }
+            })
+        } else {
+            alert("Please drop ALL the steps to ALL the all orders!")
+        }
+    });
+
+    $(document).on('click', '#next', function (e) {
+        var allcorrect = true
+        $('.dropbox').each(function (e) {
+            if ($(this).data("step") != $(this).data("order")) {
+                allcorrect = false
+            }
+        })
+        if (allcorrect) {
+            submit_answer({ 'ans': 1 })
+        } else {
+            submit_answer({ 'ans': 0 })
+        }
+        if (parseInt(ordnum) < 3) {
+            console.log(ordnum)
+            window.location.href = '/quiz2/' + (parseInt(ordnum) + 1).toString()
+        } else {
+            $('#goal').empty()
+            $('#goal').append("<h1>You have reached the end of the quiz!</h1>")
+            $('#goal').append("<span class='stepName'>Score: " + score + "/" + 4 + "</span>")
+            $('#question').append("<button class = 'quizButtons' id='restart'>Try Again</button>")
+            hoverColor($("#restart"))
+            $(document).on('click', '#restart', function (e) {
+                window.location.href = '/quiz2/0'
+            });
+
+            $('#question').append("<button class ='quizButtons' id='gohome'>Home</button>")
+            $(document).on('click', '#gohome', function (e) {
+                window.location.href = '/'
+            });
+            hoverColor($("#gohome"))
+        }
+    });
+
 })

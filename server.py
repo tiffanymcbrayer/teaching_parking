@@ -1,9 +1,11 @@
+import json
 import math
 import random
 from flask import Flask
 from flask import render_template
 from flask import redirect, url_for
 from flask import Response, request, jsonify
+from sympy import re
 app = Flask(__name__)
 
 QUIZ_NUM = 5
@@ -270,6 +272,10 @@ def quiz(q_num=None):
 def quiz2(q_num=None):
     # global questions2
     global learning
+    # if q_num == '4':
+    #     parkingType = learning['3']
+    #     return render_template('quiz2.html', parkingType=parkingType)
+    # else:
     parkingType = learning[q_num]
     return render_template('quiz2.html', parkingType=parkingType)
 
@@ -296,20 +302,13 @@ def submit_response():
 
 @app.route('/submit_response2', methods=['GET', 'POST'])
 def submit_response2():
-    global questions2
+    global learning
     global response2
     json_data = request.get_json()
-    correct_ans = questions[str(
-        response2["q_num"][int(json_data['q_num'])-1])]["answer"]
-    correct_img = questions[str(
-        response2["q_num"][int(json_data['q_num'])-1])]["answer-img"]
-    response2["num"] += 1
-    response2["ans"].append(int(json_data['choice']))
-    correct = correct_ans == int(json_data['choice'])
-    if(correct):
-        response2["score"] += 1
+    score = int(json_data['ans'])
+    response2["score"] += 1
     # TODO: Add response2 updating
-    return jsonify(response=response2, correct=correct, correct_ans=correct_ans, correct_img=correct_img)
+    return jsonify(response=response2)
 
 
 if __name__ == '__main__':

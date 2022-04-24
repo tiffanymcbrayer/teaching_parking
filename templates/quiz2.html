@@ -8,55 +8,63 @@
 <script>
     let ordnum = '{{parkingType.ord}}'
 </script>
-<div class="row">
-    <div class="col-md-6">
-        <div class="nameTitle">
-            {{parkingType.name}}
+
+<div id="goal">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="nameTitle">
+                {{parkingType.name}}
+            </div>
+        </div>
+    </div>
+
+    <div class="row nondrop">
+        <div class="col-6 drop">
+            <div class="row bluebox stepbox">
+                <span class="title2">Steps</span>
+            </div>
+            {% for num, step, gif in parkingType.steps %}
+            <div class="row stepdetail namebox" data-step="{{num}}">
+                <span>{{step}}</span>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="col-6 droporder drop">
+            <div class="row bluebox">
+                <span class="title2">Order Here</span>
+            </div>
+            {% for num, step, gif in parkingType.steps %}
+            <div class="row stepdetail dropbox" data-order="{{num}}">
+                <span>Step {{num}}</span>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="row buttons">
+        <button class='quizButtons' id='showresult'>See Results</button>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+
+            <div class="fullGif">
+                <div>
+                    Full Gif
+                </div>
+                <img src={{parkingType.fullGif}} width=60%>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-2 prev">
+        </div>
+        <div class="col-md-8">
+        </div>
+        <div class="col-md-2 next">
         </div>
     </div>
 </div>
-<div class="row nondrop">
-    <div class="col-5 dropstep drop">
-        <div class="row bluebox">
-            <span class="title2">Steps</span>
-        </div>
-        {% for num, step, gif in parkingType.steps %}
-        <div class="row stepdetail namebox">
-            <span>{{step}}</span>
-        </div>
-        {% endfor %}
-    </div>
-    <div class="col-5 droporder drop">
-        <div class="row bluebox">
-            <span class="title2">Order Here</span>
-        </div>
-        {% for num, step, gif in parkingType.steps %}
-        <div class="row stepdetail dropbox">
-            <span>Order {{num}}</span>
-        </div>
-        {% endfor %}
-    </div>
-</div>
-
-<div class="col-md-12">
-
-    <div class="fullGif">
-        <div>
-            Full Gif
-        </div>
-        <img src={{parkingType.fullGif}} width=60%>
-    </div>
-</div>
-</div>
-
-
-<div class="row">
-    <div class="col-md-2 prev">
-    </div>
-    <div class="col-md-8">
-    </div>
-    <div class="col-md-2 next">
-    </div>
-</div>
-
 {% endblock %}

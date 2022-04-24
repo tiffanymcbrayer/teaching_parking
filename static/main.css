@@ -15,7 +15,12 @@
 }
 
 .nameTitle {
-  font-size: 30px
+  font-size: 25px;
+  color: 
+  grey;
+}
+.tip{
+  padding-left: 50px
 }
 
 .stepGif {
@@ -24,14 +29,14 @@
 }
 
 .stepName {
-  font-size: 20px
+  font-size: 25px
 }
 
-.fullGif {
-  padding-top: 60px;
-  text-align: center;
+.stepExp{
+  font-size: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
-
 
 .navbar-brand {
   font-size: 25px !important;

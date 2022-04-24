@@ -18,8 +18,10 @@ learning = {
         "steps": [["1", "Drive forward until the mirror lines up with the parking line", "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/forwards_p1.gif?raw=true"],
                   ["2", "Turn the wheel to your right and move forward into space",
                       "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/forwards_p2.gif?raw=true"],
-                  ["3", "Once you are centered in the spot, straighten the wheel and move up to the line ", "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/forwards_p3.gif?raw=true"],
+                  ["3", "Once you are centered in the spot, straighten the wheel and move up to the line ",
+                      "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/forwards_p3.gif?raw=true"],
                   ["4", "All together!", "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/forwards.gif?raw=true"]],
+        "fullGif": "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/forwards.gif?raw=true",
         "tips": [["Mirror inline with parking line", "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/forwards_tip1.png?raw=true"]]
     },
     "1": {
@@ -32,8 +34,10 @@ learning = {
                       "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/reverse_p3.gif?raw=true"],
                   ["4", "Turn the wheel to the right and reverse until you are centered in the spot",
                    "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/reverse_p4.gif?raw=true"],
-                  ["5", "Once you are centered in the spot, straighten the wheel and move up to the line ", "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/reverse_p5.gif?raw=true"],
+                  ["5", "Once you are centered in the spot, straighten the wheel and move up to the line ",
+                      "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/reverse_p5.gif?raw=true"],
                   ["6", "All together!", "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/reverse.gif?raw=true"]],
+        "fullGif": "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/reverse.gif?raw=true",
         "tips": [["Mirror inline with second parking line", "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/reverse_tip1.png?raw=true"], ["Mirror inline with back bumper", "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/reverse_tip2.png?raw=true"]]
     },
     "2": {
@@ -42,9 +46,11 @@ learning = {
         "steps": [["1", "Drive forward until the mirror lines up with the parking line", "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/angled_p1.gif?raw=true"],
                   ["2", "Turn the wheel to your left and go forward into space",
                       "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/angled_p2.gif?raw=true"],
-                  ["3", "Once you are centered in the spot, straighten the wheel and move up to the line ", "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/angled_p3.gif?raw=true"],
+                  ["3", "Once you are centered in the spot, straighten the wheel and move up to the line ",
+                      "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/angled_p3.gif?raw=true"],
                   ["4", "All together!", "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/angled.gif?raw=true"]],
-        "tips": [["Mirror inline with parking line", "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/angled_tip1.png?raw=true"]]          
+        "fullGif": "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/angled.gif?raw=true",
+        "tips": [["Mirror inline with parking line", "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/angled_tip1.png?raw=true"]]
     },
     "3": {
         'ord': 3,
@@ -56,9 +62,11 @@ learning = {
                    "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/parallel_p3.gif?raw=true"],
                   ["4", "Turn the wheel left and back up until you have no more space",
                    "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/parallel_p4.gif?raw=true"],
-                  ["5", "Once you are centered in the spot, straighten the wheel and move up until you are in the middle of the spot", "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/parallel_p5.gif?raw=true"],
+                  ["5", "Once you are centered in the spot, straighten the wheel and move up until you are in the middle of the spot",
+                      "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/parallel_p5.gif?raw=true"],
                   ["6", "All together", "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/parallel.gif?raw=true"]],
-        "tips": [["Mirror inline with back corner", "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/parallel_tip1.png?raw=true"], ["Mirror inline with back bumper", "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/parallel_tip2.png?raw=true"]]       
+        "fullGif": "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/parallel.gif?raw=true",
+        "tips": [["Mirror inline with back corner", "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/parallel_tip1.png?raw=true"], ["Mirror inline with back bumper", "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/parallel_tip2.png?raw=true"]]
     }
 }
 
@@ -230,7 +238,7 @@ def learn(type=None, stepnum=None):
     lastStep = str(lastStep)
     print(lastStep)
 
-    return render_template('learn.html', parkingType=parkingType, step = step, lastStep = lastStep)
+    return render_template('learn.html', parkingType=parkingType, step=step, lastStep=lastStep)
 
 
 @app.route('/quiz/<q_num>')

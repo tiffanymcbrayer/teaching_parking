@@ -1,9 +1,11 @@
+import json
 import math
 import random
 from flask import Flask
 from flask import render_template
 from flask import redirect, url_for
 from flask import Response, request, jsonify
+from sympy import re
 app = Flask(__name__)
 
 QUIZ_NUM = 5
@@ -63,7 +65,7 @@ learning = {
 questions = {
     "1": {
         "goal": "park forwards",
-        "question": "When should I start turning right?",
+        "question": "In the first step, how should driver align the car?",
         "question-img": "",
         "choice-num": 3,
         "choice-text": ["", "", ""],
@@ -75,7 +77,7 @@ questions = {
     },
     "2": {
         "goal": "park backwards",
-        "question": "How should I position the car if the next step is to turn the wheel left and move forward?",
+        "question": "In the second step before turn the wheel left and move forward, how should the driver align the car?",
         "question-img": "",
         "choice-num": 4,
         "choice-text": ["", "", "", ""],
@@ -88,7 +90,7 @@ questions = {
     },
     "3": {
         "goal": "park angled forwards",
-        "question": "Which car is in a good position to turn right and move forwards?",
+        "question": "In the first step of angled parking, which alignment is correct?",
         "question-img": "",
         "choice-num": 2,
         "choice-text": ["", ""],
@@ -99,7 +101,7 @@ questions = {
     },
     "4": {
         "goal": "parallel park",
-        "question": "How do I position the car before I turn my wheel right to reverse into the spot?",
+        "question": "In the first step of parallel parking, how do I position the car before I turn my wheel right to reverse into the spot?",
         "question-img": "",
         "choice-num": 3,
         "choice-text": ["", "", ""],
@@ -111,7 +113,7 @@ questions = {
     },
     "5": {
         "goal": "parallel park",
-        "question": "How do I position the car before I reverse straight into the spot?",
+        "question": "In the second step, which position should I align before backing straight?",
         "question-img": "",
         "choice-num": 3,
         "choice-text": ["", "", ""],
@@ -123,7 +125,88 @@ questions = {
     }
 }
 
+#########################################
+# Save for future use
+#########################################
+# questions2 = {
+#     "0": {
+#         'ord': 0,
+#         "name": "Forwards Parking",
+#         "steps": [[1, "Drive forward until the :carterms: lines up with the parking line"],
+#                   [2,
+#                       "Turn the wheel to your :directions: and move forward into space"],
+#                   [3, "Once you are centered in the spot, straighten the wheel and move up to the line"]],
+
+#         "answers": {1: 'mirror',
+#                     2: 'right'},
+
+#         "fullGif": "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/forwards.gif?raw=true"
+
+#     },
+#     "1": {
+#         'ord': 1,
+#         "name": "Reverse Parking",
+#         "steps": [[1, "Drive forward until the :carterms: lines up with the parking line (keep close to the space)"],
+#                   [2,
+#                       "Turn the wheel to your :directions: and go forward until you see edge of parking line in left mirror"],
+#                   [3,
+#                       "Straighten the wheel until you align your :directions: mirror with the edge of the car to your right"],
+#                   [4,
+#                       "Turn the wheel to the :directions: and reverse until you are centered in the spot"],
+#                   [5, "Once you are centered in the spot, straighten the wheel and move up to the line"]],
+#         "answers": {1: 'mirror',
+#                     2: 'left',
+#                     3: 'right',
+#                     4: 'right'},
+#         "fullGif": "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/reverse.gif?raw=true"
+
+#     },
+#     "2": {
+#         'ord': 2,
+#         "name": "Angled Parking",
+#         "steps": [[1, "Drive forward until the :carterms: lines up with the parking line"],
+#                   [2,
+#                       "Turn the wheel to your :directions: and go forward into space"],
+#                   [3, "Once you are centered in the spot, straighten the wheel and move up to the line "]],
+
+#         "answers": {1: 'mirror',
+#                     2: 'left'},
+#         "fullGif": "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/angled.gif?raw=true"
+
+#     },
+#     "3": {
+#         'ord': 3,
+#         "name": "Parallel Parking",
+#         "steps": [[1, "Drive forward until your car is in line with :roadterms: (keep a reasonably close distance to the car)"],
+#                   [2,
+#                       "Turn the wheel all the way to your right and reverse until you can see the :roadterms: through the mirror "],
+#                   [3,
+#                       "Straighten out the wheel and back in until you align your right mirror with :roadterms: in front"],
+#                   [4,
+#                       "Turn the wheel :directions: and back up until you have no more space"],
+#                   [5, "Once you are centered in the spot, straighten the wheel and move up until you are in the middle of the spot"]],
+#         "answers": {1: 'the car next to you',
+#                     2: 'parking line corner',
+#                     3: 'the other car',
+#                     4: 'left'},
+#         "fullGif": "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/parallel.gif?raw=true"
+#     }
+# }
+
+# directions = ['left', 'right']
+# carterms = ['mirror', 'front wheel', 'rear wheel']
+# roadterms = ['parking line corner', 'parking line end',
+#              'the car next to you', "the other car's bumper"]
+
+
 response = {
+    "num": 0,
+    "q_num": [],
+    "ans": [],
+    "score": 0
+}
+
+response2 = {
     "num": 0,
     "q_num": [],
     "ans": [],
@@ -195,6 +278,18 @@ def quiz(q_num=None):
         }
         return render_template('quiz.html', end=0, total_num=QUIZ_NUM, q_num=q_num, response=response, question=question)
 
+
+@app.route('/quiz2/<q_num>')
+def quiz2(q_num=None):
+    # global questions2
+    global learning
+    # if q_num == '4':
+    #     parkingType = learning['3']
+    #     return render_template('quiz2.html', parkingType=parkingType)
+    # else:
+    parkingType = learning[q_num]
+    return render_template('quiz2.html', parkingType=parkingType)
+
 ### AJAX CALLS ###
 
 
@@ -214,6 +309,17 @@ def submit_response():
         response["score"] += 1
     # TODO: Add response updating
     return jsonify(response=response, correct=correct, correct_ans=correct_ans, correct_img=correct_img)
+
+
+@app.route('/submit_response2', methods=['GET', 'POST'])
+def submit_response2():
+    global learning
+    global response2
+    json_data = request.get_json()
+    score = int(json_data['ans'])
+    response2["score"] += 1
+    # TODO: Add response2 updating
+    return jsonify(response=response2)
 
 
 if __name__ == '__main__':

@@ -47,7 +47,7 @@
   font-size: 20px !important;
 }
 
-.start{
+.start {
   margin-top: 50px;
   font-size: 20px !important;
   display: flex;
@@ -55,7 +55,7 @@
   align-items: center;
 }
 
-.welcome{
+.welcome {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -63,13 +63,13 @@
   font-size: 50px;
 }
 
-.homePic{
+.homePic {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.startButton{
+.startButton {
   background-color: #007bff;
   border-radius: 15px;
   border: none;
@@ -81,13 +81,13 @@
   font-size: 16px;
   margin: 4px;
   cursor: pointer;
-  border-style: solid; 
+  border-style: solid;
   border-width: 4px;
   border-color: #808080;
 }
 
-.learnButtons{
-  background-color: #007bff;  
+.learnButtons {
+  background-color: #007bff;
   border: none;
   color: white;
   padding: 15px 32px;
@@ -97,14 +97,14 @@
   font-size: 16px;
   margin: 4px;
   cursor: pointer;
-  border-style: solid; 
+  border-style: solid;
   border-width: 4px;
   border-color: #808080;
   border-radius: 15px;
 }
 
-.quizButtons{
-  background-color: #007bff;  
+.quizButtons {
+  background-color: #007bff;
   border: none;
   color: white;
   padding: 15px 32px;
@@ -114,8 +114,81 @@
   font-size: 16px;
   margin: 4px;
   cursor: pointer;
-  border-style: solid; 
+  border-style: solid;
   border-width: 4px;
   border-color: #808080;
   border-radius: 15px;
+}
+
+.title2 {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 78px;
+}
+
+
+.bluebox {
+  margin-left: 10px;
+  margin-right: 40px;
+  /* width: 150px; */
+  /* height: 80px; */
+  border: 1px solid lightgray;
+  background-color: lightblue;
+}
+
+.namebox {
+  border: 1px solid lightgray;
+  padding-left: 0px;
+  margin-right: 40px;
+  width: 100%;
+  height: 60px;
+  /* width: 150px; */
+  /* height: auto; */
+}
+
+.dropbox {
+  border: 1px solid lightgray;
+  background-color: lightgray;
+  padding-left: 0px;
+  margin-right: 40px;
+  width: 100%;
+  height: 80px;
+  /* width: 150px; */
+  /* height: auto; */
+}
+
+.hint {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 1;
+  transition: .5s ease;
+  background-color: #008CBA;
+
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  transition: .5s ease;
+  opacity: 0;
+}
+
+.fullGif {
+  border: 1px solid lightgray;
+}
+
+.fullGif:hover .overlay {
+  opacity: 1;
 }

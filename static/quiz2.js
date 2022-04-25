@@ -125,25 +125,7 @@ $(document).ready(function () {
         } else {
             submit_answer({ 'ans': 0 })
         }
-        if (parseInt(ordnum) < 3) {
-            console.log(ordnum)
-            window.location.href = '/quiz2/' + (parseInt(ordnum) + 1).toString()
-        } else {
-            $('#goal').empty()
-            $('#goal').append("<h1>You have reached the end of the quiz!</h1>")
-            $('#goal').append("<span class='stepName'>Score: " + score + "/" + 4 + "</span>")
-            $('#question').append("<button class = 'quizButtons' id='restart'>Try Again</button>")
-            hoverColor($("#restart"))
-            $(document).on('click', '#restart', function (e) {
-                window.location.href = '/quiz2/0'
-            });
-
-            $('#question').append("<button class ='quizButtons' id='gohome'>Home</button>")
-            $(document).on('click', '#gohome', function (e) {
-                window.location.href = '/'
-            });
-            hoverColor($("#gohome"))
-        }
+        window.location.href = '/quiz/' + (parseInt(ordnum) + 1).toString()
     });
 
 })

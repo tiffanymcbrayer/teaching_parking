@@ -36,7 +36,7 @@ $(document).ready(function () {
     else if(currstep ==1){
         //if it is the first step but not the first lesson
         let nextnum = parseInt(ordnum) - 1
-        $('.prev').append("<button class = 'learnButtons' id='prevtutorial'>Previous</button>")
+        $('.prev').append("<button class = 'learnButtons' id='prevtutorial'>Previous Lesson Summary</button>")
         $(document).on('click', '#prevtutorial', function (e) {
             var nextnum = parseInt(ordnum) - 1
             window.location.href = '/learn/' + nextnum+'/'+prevLessonSteps
@@ -45,7 +45,7 @@ $(document).ready(function () {
     }   
 
     else {
-        $('.prev').append("<button class = 'learnButtons' id='prevtutorial'>Previous</button>")
+        $('.prev').append("<button class = 'learnButtons' id='prevtutorial'>Previous Step</button>")
         $(document).on('click', '#prevtutorial', function (e) {
             var nextnum = parseInt(currstep) - 1
             window.location.href = '/learn/' + ordnum+'/'+nextnum
@@ -66,7 +66,7 @@ $(document).ready(function () {
 
     else if (currstep ==laststep) {
         //if it is the last step but there is a next lesson
-        $('.next').append("<button class = 'learnButtons' id='nexttutorial'>Next</button>")
+        $('.next').append("<button class = 'learnButtons' id='nexttutorial'>Next Lesson</button>")
         $(document).on('click', '#nexttutorial', function (e) {
             var nextnum = parseInt(ordnum) + 1
             window.location.href = '/learn/' + nextnum+'/1'
@@ -76,7 +76,7 @@ $(document).ready(function () {
 
     else {
         //if there is another step in the same lesson
-        $('.next').append("<button class = 'learnButtons' id='nexttutorial'>Next</button>")
+        $('.next').append("<button class = 'learnButtons' id='nexttutorial'>Next Step</button>")
         $(document).on('click', '#nexttutorial', function (e) {
             let nextStep = parseInt(currstep)+1 
             window.location.href = '/learn/'+ordnum+'/'+nextStep

@@ -34,6 +34,26 @@
   font-size: 25px
 }
 
+.welcomeInteractive{
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  font-size: 60px;
+  margin-bottom: 60px;
+}
+
+.welcomeLearn{
+  font-weight:  bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  font-size: 40px;
+  margin-bottom:  20px;
+}
+
 .stepExp {
   font-size: 20px;
   padding-top: 20px;
@@ -48,6 +68,13 @@
   font-size: 20px !important;
 }
 
+.homeImage{
+  height: 275px;
+  width:  200px;
+  margin-left:  25px;
+  margin-top: -90px;
+}
+
 .start {
   margin-top: 50px;
   font-size: 20px !important;
@@ -56,18 +83,19 @@
   align-items: center;
 }
 
+.iconHome{
+  border-style: dotted ;
+  border-width: 3px;
+  border-color: #ff9999;
+}
+
 .welcome {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 50px;
-  font-size: 50px;
-}
-
-.homePic {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin-top: 20px;
+  font-size: 20px;
+  padding-top:  10px;
 }
 
 .startButton {
@@ -75,16 +103,20 @@
   border-radius: 15px;
   border: none;
   color: white;
+  font-size: 25px;
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  font-weight:  bold;
   margin: 4px;
   cursor: pointer;
   border-style: solid;
   border-width: 4px;
-  border-color: #808080;
+  border-color: #ff9999;
+  width:  500px;
+  height:   100px;
+  margin-top: 60px;
 }
 
 .learnButtons {

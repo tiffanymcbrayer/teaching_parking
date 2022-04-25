@@ -284,12 +284,12 @@ response = {
     "score": 0
 }
 
-response2 = {
+'''response2 = {
     "num": 0,
     "q_num": [],
     "ans": [],
     "score": 0
-}
+}'''
 
 
 @app.route('/')
@@ -362,7 +362,7 @@ def quiz(q_num=None):
             parkingType = learning[str(questions[q]["ord"])]
             return render_template('quiz2.html', parkingType=parkingType)
 
-@app.route('/quiz2/<q_num>')
+'''@app.route('/quiz2/<q_num>')
 def quiz2(q_num=None):
     # global questions2
     global learning
@@ -372,7 +372,7 @@ def quiz2(q_num=None):
     # else:
     parkingType = learning[q_num]
     return render_template('quiz2.html', parkingType=parkingType)
-
+'''
 ### AJAX CALLS ###
 
 

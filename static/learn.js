@@ -88,6 +88,7 @@ $(document).ready(function () {
         let MyDiv1 = $("#tipDivId").html();
         document.getElementById('tipDivId').innerHTML = ""
         $("#tipDivId").append("<button class='tipButtons' id='tipButton'>Show Tips</button>")
+        hoverColor($("#tipButton"))
         $('#tipButton').one('click', function(){
             document.getElementById('tipDivId').innerHTML = document.getElementById('tipDivId').innerHTML + MyDiv1
             $('#tipButton').css('background-color', 'grey')

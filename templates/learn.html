@@ -4,6 +4,9 @@
 <script type="text/javascript" src="{{ url_for('static', filename = 'learn.js') }}"></script>
 <script>
     let ordnum = '{{parkingType.ord}}'
+    let currstep = '{{step[0]}}'
+    let laststep = '{{parkingType.numsteps}}'
+    let prevLessonSteps = '{{prevType.numsteps}}'
 </script>
 <div class="row">
     <div class="col-md-6">
@@ -30,6 +33,7 @@
         </div>
         <div class="col-md-3">
             {% if step[0] == lastStep%}
+                <div class="tipDivClass" id="tipDivId">
                 {% for tip, img in parkingType.tips %}
                     <div class = "tip">
                         <div>
@@ -39,7 +43,8 @@
                             <img src={{img}} width = 60%>
                         </div>
                     </div>
-                {% endfor %}
+                {% endfor %} 
+                </div>   
             {% endif %}
         </div>
     </div>  

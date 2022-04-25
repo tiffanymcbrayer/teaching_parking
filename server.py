@@ -22,7 +22,8 @@ learning = {
                       "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/forwards_p3.gif?raw=true"],
                   ["4", "All together!", "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/forwards.gif?raw=true"]],
         "fullGif": "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/forwards.gif?raw=true",
-        "tips": [["Mirror inline with parking line", "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/forwards_tip1.png?raw=true"]]
+        "tips": [["Mirror inline with parking line", "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/forwards_tip1.png?raw=true"]],
+        "numsteps":"4"
     },
     "1": {
         'ord': 1,
@@ -38,7 +39,8 @@ learning = {
                       "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/reverse_p5.gif?raw=true"],
                   ["6", "All together!", "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/reverse.gif?raw=true"]],
         "fullGif": "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/reverse.gif?raw=true",
-        "tips": [["Mirror inline with second parking line", "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/reverse_tip1.png?raw=true"], ["Mirror inline with back bumper", "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/reverse_tip2.png?raw=true"]]
+        "tips": [["Mirror inline with second parking line", "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/reverse_tip1.png?raw=true"], ["Mirror inline with back bumper", "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/reverse_tip2.png?raw=true"]],
+        "numsteps":"6"
     },
     "2": {
         'ord': 2,
@@ -50,7 +52,8 @@ learning = {
                       "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/angled_p3.gif?raw=true"],
                   ["4", "All together!", "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/angled.gif?raw=true"]],
         "fullGif": "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/angled.gif?raw=true",
-        "tips": [["Mirror inline with parking line", "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/angled_tip1.png?raw=true"]]
+        "tips": [["Mirror inline with parking line", "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/angled_tip1.png?raw=true"]],
+        "numsteps":"4"
     },
     "3": {
         'ord': 3,
@@ -66,7 +69,8 @@ learning = {
                       "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/parallel_p5.gif?raw=true"],
                   ["6", "All together", "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/parallel.gif?raw=true"]],
         "fullGif": "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/parallel.gif?raw=true",
-        "tips": [["Mirror inline with back corner", "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/parallel_tip1.png?raw=true"], ["Mirror inline with back bumper", "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/parallel_tip2.png?raw=true"]]
+        "tips": [["Mirror inline with back corner", "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/parallel_tip1.png?raw=true"], ["Mirror inline with back bumper", "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/parallel_tip2.png?raw=true"]],
+        "numsteps":"6"
     }
 }
 
@@ -231,14 +235,17 @@ def homepage():
 def learn(type=None, stepnum=None):
     global learning
     parkingType = learning[type]
+    if int(type)-1 >=0:
+      prevType = learning[str(int(type)-1)]
+    else:
+      prevType = None
 
     indexStep = int(stepnum)-1
     step = parkingType['steps'][indexStep]
     lastStep = len(parkingType['steps'])
     lastStep = str(lastStep)
-    print(lastStep)
 
-    return render_template('learn.html', parkingType=parkingType, step=step, lastStep=lastStep)
+    return render_template('learn.html', parkingType=parkingType, step=step, lastStep=lastStep, prevType = prevType)
 
 
 @app.route('/quiz/<q_num>')

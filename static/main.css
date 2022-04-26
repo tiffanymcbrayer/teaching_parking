@@ -14,15 +14,40 @@
   padding: 10px
 }
 
-.nameTitle {
-  font-size: 25px;
-  color:
-    grey;
+.prev{
+  margin-top: 120px;
 }
 
-.tip {
-  padding-left: 50px;
-  text-align: center;
+
+.topMar{
+  margin-top: 80px;
+}
+
+
+.next{
+  margin-top: 120px;
+}
+
+.nameTitle {
+  margin-top: 20px;
+  font-size: 45px;
+  font-weight:  bold;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.blockBackground{
+  background-color: #87cefa;
+}
+
+.tipImage{
+    height: auto; 
+    width: auto; 
+    max-width: 100px; 
+    max-height: 100px;
 }
 
 .stepGif {
@@ -30,8 +55,25 @@
   text-align: center;
 }
 
+
 .stepName {
-  font-size: 25px
+  padding-top: 80px;
+  font-size: 35px;
+  font-weight: bold;
+  justify-content: center;
+  color: black;
+  background-color: #87cefa;
+  width: 760px;
+  text-align: center;
+}
+
+.stepExp {
+  font-size: 20px;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  color: black;
+  background-color: #87cefa;
+  text-align: center;
 }
 
 .welcomeInteractive{
@@ -42,6 +84,7 @@
   margin-top: 50px;
   font-size: 60px;
   margin-bottom: 60px;
+  color: #525252;
 }
 
 .welcomeLearn{
@@ -52,12 +95,7 @@
   margin-top: 50px;
   font-size: 40px;
   margin-bottom:  20px;
-}
-
-.stepExp {
-  font-size: 20px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  color: #525252;
 }
 
 .navbar-brand {
@@ -86,7 +124,7 @@
 .iconHome{
   border-style: dotted ;
   border-width: 3px;
-  border-color: #ff9999;
+  border-color: #87cefa;
 }
 
 .welcome {
@@ -113,7 +151,7 @@
   cursor: pointer;
   border-style: solid;
   border-width: 4px;
-  border-color: #ff9999;
+  border-color: #87cefa;
   width:  500px;
   height:   100px;
   margin-top: 60px;
@@ -121,7 +159,6 @@
 
 .learnButtons {
   background-color: #007bff;
-  border: none;
   color: white;
   padding: 15px 32px;
   text-align: center;
@@ -132,8 +169,10 @@
   cursor: pointer;
   border-style: solid;
   border-width: 4px;
-  border-color: #808080;
+  border-color: #87cefa;
   border-radius: 15px;
+  width: 150px;
+  height: 105px;
 }
 
 .quizButtons {
@@ -244,5 +283,20 @@
   border-width: 4px;
   border-color: #808080;
   border-radius: 15px;
-  margin-left: 100px;
+}
+
+.tipButtonClass{
+  text-align: center;
+}
+
+.tipDiv{
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-top: 50px;
+}
+
+.eachTip{
+  padding-top: 30px;
+  text-align: right !important;
+  margin-right: 200px;
 }

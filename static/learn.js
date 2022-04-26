@@ -14,9 +14,11 @@ var dict = {
 function hoverColor(button){
     $(button).mouseover(function(){
         button.css('background-color', '#77b5fe'); //how to change back after?
+        button.css('border-style', 'dashed');
     });
     button.mouseout(function(){
         button.css('background-color', '#007bff'); //how to change back after?
+        button.css('border-style', 'solid');
     });
 }
 

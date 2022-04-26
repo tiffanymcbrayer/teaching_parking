@@ -20,7 +20,7 @@ learning = {
                       "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/forwards_p2.gif?raw=true"],
                   ["3", "Once you are centered in the spot, straighten the wheel and move up to the line ",
                       "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/forwards_p3.gif?raw=true"],
-                  ["4", "All together!", "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/forwards.gif?raw=true"]],
+                  ["4", "", "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/forwards.gif?raw=true"]],
         "fullGif": "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/forwards.gif?raw=true",
         "tips": [["Mirror inline with parking line", "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/forwards_tip1.png?raw=true"]],
         "numsteps": "4"
@@ -37,7 +37,7 @@ learning = {
                    "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/reverse_p4.gif?raw=true"],
                   ["5", "Once you are centered in the spot, straighten the wheel and move up to the line ",
                       "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/reverse_p5.gif?raw=true"],
-                  ["6", "All together!", "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/reverse.gif?raw=true"]],
+                  ["6", "", "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/reverse.gif?raw=true"]],
         "fullGif": "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/reverse.gif?raw=true",
         "tips": [["Mirror inline with second parking line", "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/reverse_tip1.png?raw=true"], ["Mirror inline with back bumper", "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/reverse_tip2.png?raw=true"]],
         "numsteps": "6"
@@ -50,7 +50,7 @@ learning = {
                       "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/angled_p2.gif?raw=true"],
                   ["3", "Once you are centered in the spot, straighten the wheel and move up to the line ",
                       "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/angled_p3.gif?raw=true"],
-                  ["4", "All together!", "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/angled.gif?raw=true"]],
+                  ["4", "", "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/angled.gif?raw=true"]],
         "fullGif": "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/angled.gif?raw=true",
         "tips": [["Mirror inline with parking line", "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/angled_tip1.png?raw=true"]],
         "numsteps": "4"
@@ -67,7 +67,7 @@ learning = {
                    "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/parallel_p4.gif?raw=true"],
                   ["5", "Once you are centered in the spot, straighten the wheel and move up until you are in the middle of the spot",
                       "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/parallel_p5.gif?raw=true"],
-                  ["6", "All together", "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/parallel.gif?raw=true"]],
+                  ["6", "", "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/parallel.gif?raw=true"]],
         "fullGif": "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/parallel.gif?raw=true",
         "tips": [["Mirror inline with back corner", "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/parallel_tip1.png?raw=true"], ["Mirror inline with back bumper", "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/parallel_tip2.png?raw=true"]],
         "numsteps": "6"

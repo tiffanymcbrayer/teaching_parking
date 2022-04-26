@@ -32,7 +32,7 @@
   margin-top: 20px;
   font-size: 45px;
   font-weight:  bold;
-  color: black;
+  color: #525252;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -59,11 +59,11 @@
 
 
 .stepName {
-  padding-top: 80px;
+  padding-top: 60px;
   font-size: 35px;
   font-weight: bold;
   justify-content: center;
-  color: black;
+  color: #525252;
   background-color: #87cefa;
   width: 760px;
   text-align: center;
@@ -73,7 +73,7 @@
   font-size: 20px;
   padding-top: 20px;
   padding-bottom: 30px;
-  color: black;
+  color: #525252;
   background-color: #87cefa;
   text-align: center;
 }

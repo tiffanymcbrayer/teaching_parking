@@ -39,6 +39,17 @@
   margin-bottom: 60px;
 }
 
+.nameTitleQuiz {
+  margin-top: 20px;
+  font-size: 45px;
+  font-weight:  bold;
+  color: #525252;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
 .blockBackground{
   background-color: #87cefa;
 }
@@ -209,7 +220,7 @@
   cursor: pointer;
   border-style: solid;
   border-width: 4px;
-  border-color: #808080;
+  border-color: #87cefa;
   border-radius: 15px;
 }
 

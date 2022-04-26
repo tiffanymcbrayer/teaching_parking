@@ -11,13 +11,13 @@
     let question = {{ question| tojson }}
 </script>
 
-<div class="row nameTitle">
+<div class="row nameTitleQuiz">
     Quiz
 </div>
 <div class="row">
     <div class="col-md-10">
         <div class="row" id="goal">
-            <span class="bold darkgray stepName">
+            <span class="bold darkgray stepNameQuiz">
                 Goal:
             </span>
         </div>
@@ -27,7 +27,7 @@
         <div class="row" id="question-img">
         </div>
     </div>
-    <div class="col-md-2 stepName">
+    <div class="col-md-2 stepNameQuiz">
         {% if q_num %}
         {{q_num}}/{{total_num}}
         {% endif %}

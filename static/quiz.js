@@ -37,7 +37,7 @@ $(document).ready(function () {
                     $('#' + dict[c["choice"]]).css("background-color", "red")
                 }
 
-                $('#answer').append("<span class='stepName'>Correct answer is " + dict[result["correct_ans"]] + "</span>")
+                $('#answer').append("<span class='stepNameQuiz'>Correct answer is " + dict[result["correct_ans"]] + "</span>")
                 $('#answer-img').append("<img src='" + result["correct_img"] + "' class='img-fluid'>")
                 if((parseInt(q_num) + 1).toString()==6){
                    $('#next-button').append("<button class = 'quizButtons' id='next'>See Results</button>") 
@@ -57,7 +57,7 @@ $(document).ready(function () {
     }
     if (end_quiz == 1) {
         $('#goal').empty()
-        $('#goal').append("<span class='stepName'>Score: " + response["score"] + "/" + QUIZ_NUM + "</span>")
+        $('#goal').append("<span class='stepNameQuiz'>Score: " + response["score"] + "/" + QUIZ_NUM + "</span>")
         $('#question').append("<button class = 'quizButtons' id='restart'>Try Again</button>")
         hoverColor($("#restart"))
         $(document).on('click', '#restart', function (e) {
@@ -73,7 +73,7 @@ $(document).ready(function () {
     } else {
         if (!question) {
             $('#goal').empty()
-            $('#goal').append("<span class='stepName'>Test your knowledge!</span>")
+            $('#goal').append("<span class='stepNameQuiz'>Test your knowledge!</span>")
             $('#question').append('<button class = "quizButtons" id="start">Start</button>')
             hoverColor($("#start"))
 
@@ -81,8 +81,8 @@ $(document).ready(function () {
                 window.location.href = '/quiz/start'
             })
         } else {
-            $('#goal').append("<span class='ml-5 stepName'>" + question['goal'] + "</span>")
-            $('#question').append("<span class='stepName'>" + question['question'] + "</span>")
+            $('#goal').append("<span class='ml-5 stepNameQuiz'>" + question['goal'] + "</span>")
+            $('#question').append("<span class='stepNameQuiz'>" + question['question'] + "</span>")
             $.each(question['choice-img'], function (index, value) {
                 let choice = CHOICES[index]
                 $('#' + choice + "-img").append("<img class='img-fluid' src='" + this + "'></img>")

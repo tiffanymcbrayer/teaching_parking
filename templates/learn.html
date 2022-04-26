@@ -2,11 +2,15 @@
 
 {% block content %}
 <script type="text/javascript" src="{{ url_for('static', filename = 'learn.js') }}"></script>
+<script src="https://unpkg.com/freezeframe/dist/freezeframe.min.js"></script>
+
 <script>
     let ordnum = '{{parkingType.ord}}'
     let currstep = '{{step[0]}}'
     let laststep = '{{parkingType.numsteps}}'
     let prevLessonSteps = '{{prevType.numsteps}}'
+    let lessonName = '{{parkingType.name}}'
+    let prevName = '{{prevType.name}}'
 </script>
 
 
@@ -29,7 +33,7 @@
     </div>
     <div class="col-md-8 blockBackground">
             <div class="stepGif">
-                <img src={{step[2]}}>
+                <img src={{step[2]}} class = "freezeframe">
             </div>
     </div>
     <div class="col-md-2 next">

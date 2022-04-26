@@ -10,7 +10,6 @@ var dict = {
     3: "D"
 };
 
-
 function hoverColor(button){
     $(button).mouseover(function(){
         button.css('background-color', '#77b5fe'); //how to change back after?
@@ -24,10 +23,16 @@ function hoverColor(button){
 
 
 $(document).ready(function () {
+
+    new Freezeframe('.freezeframe', {
+    trigger: 'click',   
+    overlay: true
+    });
+
     // let ordnumi = int(ordnum)
     //if it is the first step in first lesson
     if (ordnum == 0 && currstep ==1) {
-        $('.prev').append("<button class = 'learnButtons' id='home'>Home</button>")
+        $('.prev').append("<button class = 'prevButtons' id='home'>Home</button>")
         $(document).on('click', '#home', function (e) {
             window.location.href = '/'
         }); 
@@ -38,7 +43,7 @@ $(document).ready(function () {
     else if(currstep ==1){
         //if it is the first step but not the first lesson
         let nextnum = parseInt(ordnum) - 1
-        $('.prev').append("<button class = 'learnButtons' id='prevtutorial'>Previous Lesson Summary</button>")
+        $('.prev').append("<button class = 'prevButtons' id='prevtutorial'>Summary: "+prevName+"</button>")
         $(document).on('click', '#prevtutorial', function (e) {
             var nextnum = parseInt(ordnum) - 1
             window.location.href = '/learn/' + nextnum+'/'+prevLessonSteps
@@ -47,7 +52,7 @@ $(document).ready(function () {
     }   
 
     else {
-        $('.prev').append("<button class = 'learnButtons' id='prevtutorial'>Previous Step</button>")
+        $('.prev').append("<button class = 'prevButtons' id='prevtutorial'>Previous Step</button>")
         $(document).on('click', '#prevtutorial', function (e) {
             var nextnum = parseInt(currstep) - 1
             window.location.href = '/learn/' + ordnum+'/'+nextnum
@@ -59,7 +64,7 @@ $(document).ready(function () {
 
     if (ordnum == 3 && currstep ==laststep) {
         //if it is the last step in the last lesson
-        $('.next').append("<button class = 'learnButtons' id='quiz'>Start Quiz</button>")
+        $('.next').append("<button class = 'nextButtons' id='quiz'>Start Quiz</button>")
         $(document).on('click', '#quiz', function (e) {
             window.location.href = '/quiz/0'
         });
@@ -68,7 +73,7 @@ $(document).ready(function () {
 
     else if (currstep ==laststep) {
         //if it is the last step but there is a next lesson
-        $('.next').append("<button class = 'learnButtons' id='nexttutorial'>Next Lesson</button>")
+        $('.next').append("<button class = 'nextButtons' id='nexttutorial'>Next Lesson</button>")
         $(document).on('click', '#nexttutorial', function (e) {
             var nextnum = parseInt(ordnum) + 1
             window.location.href = '/learn/' + nextnum+'/1'
@@ -76,9 +81,19 @@ $(document).ready(function () {
         hoverColor($("#nexttutorial"))
     } 
 
+    else if ((parseInt(currstep)+1) ==laststep){
+        //if there is another step in the same lesson
+        $('.next').append("<button class = 'nextButtons' id='nexttutorial'>Summary: "+lessonName+ "</button>")
+        $(document).on('click', '#nexttutorial', function (e) {
+            let nextStep = parseInt(currstep)+1 
+            window.location.href = '/learn/'+ordnum+'/'+nextStep
+        });
+        hoverColor($("#nexttutorial"))
+    }    
+
     else {
         //if there is another step in the same lesson
-        $('.next').append("<button class = 'learnButtons' id='nexttutorial'>Next Step</button>")
+        $('.next').append("<button class = 'nextButtons' id='nexttutorial'>Next Step</button>")
         $(document).on('click', '#nexttutorial', function (e) {
             let nextStep = parseInt(currstep)+1 
             window.location.href = '/learn/'+ordnum+'/'+nextStep

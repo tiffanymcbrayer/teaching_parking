@@ -51,7 +51,7 @@
 }
 
 .blockBackground{
-  background-color: #87cefa;
+  background-color: #f8f8ff;
 }
 
 .tipImage{
@@ -76,7 +76,7 @@
   font-weight: bold;
   justify-content: center;
   color: #525252;
-  background-color: #87cefa;
+  background-color: #f8f8ff;
   width: 760px;
   text-align: center;
 }
@@ -86,7 +86,7 @@
   padding-top: 20px;
   padding-bottom: 30px;
   color: #525252;
-  background-color: #87cefa;
+  background-color: #f8f8ff;
   text-align: center;
 }
 
@@ -138,7 +138,7 @@
 .iconHome{
   border-style: dotted ;
   border-width: 3px;
-  border-color: #87cefa;
+  border-color: #f8f8ff;
 }
 
 .welcome {
@@ -165,7 +165,7 @@
   cursor: pointer;
   border-style: solid;
   border-width: 4px;
-  border-color: #87cefa;
+  border-color: #f8f8ff;
   width:  500px;
   height:   100px;
   margin-top: 60px;
@@ -183,7 +183,7 @@
   cursor: pointer;
   border-style: solid;
   border-width: 4px;
-  border-color: #87cefa;
+  border-color: #f8f8ff;
   border-radius: 15px;
   width: 150px;
   height: 105px;
@@ -201,7 +201,7 @@
   cursor: pointer;
   border-style: solid;
   border-width: 4px;
-  border-color: #87cefa;
+  border-color: #f8f8ff;
   border-radius: 15px;
   width: 150px;
   height: 105px;
@@ -220,7 +220,7 @@
   cursor: pointer;
   border-style: solid;
   border-width: 4px;
-  border-color: #87cefa;
+  border-color: #f8f8ff;
   border-radius: 15px;
 }
 
@@ -313,7 +313,7 @@
   cursor: pointer;
   border-style: solid;
   border-width: 4px;
-  border-color: #87cefa;
+  border-color: #f8f8ff;
   border-radius: 15px;
 }
 

@@ -44,22 +44,24 @@ $(document).ready(function () {
 
     $('.stepsdiv').randomize('.namebox');
 
-    $('.namebox').hover(function () {
-        $(this).css('background-color', 'lightyellow')
+    $('.dragbox').hover(function () {
+        $(this).css('background-color', 'orange')
         $(this).css('cursor', 'move')
     }, function () {
-        $(this).css('background-color', 'white')
+        $(this).css('background-color', '#007bff')
         $(this).css('cursor', 'default')
     })
-    $('.namebox').draggable({
+    $('.dragbox').draggable({
         revert: 'invalid',
-        stack: '.namebox',
+        stack: '.dragbox',
         start: function (event, ui) {
             console.log($(this).data('from'))
             $('.dropbox').css('background-color', '#37839c')
         },
         stop: function (event, ui) {
             $('.dropbox').css('background-color', 'lightgray')
+            $(this).css('background-color', '#007bff')
+            $(this).css('cursor', 'default')
         },
     });
 
@@ -67,7 +69,7 @@ $(document).ready(function () {
         tolerance: 'pointer',
 
         drop: function (event, ui) {
-            $(ui.draggable).detach().css({ top: 0, left: 0 }).appendTo(this);
+            $(ui.draggable).detach().css({ top: -40, left: -50 }).appendTo(this);
             $(this).data("step", $(ui.draggable).data("step"));
             console.log(this)
             console.log("Data step " + $(this).data("step"));

@@ -19,43 +19,44 @@
     </div>
 
     <div class="row nondrop">
-        <div class="col-6 drop stepsdiv">
+        <div class="col-1 drop stepsdiv">
             <div class="row bluebox stepbox">
                 <span class="title2">Steps</span>
             </div>
             {% for num, step, gif in parkingType.steps %}
             <div class="row stepdetail namebox" data-step="{{num}}">
-                <span>{{step}}</span>
+                <div id="badge-ribbon" class="dragbox" data-step="{{num}}">
+                    <span class="ordernum">{{num}}</span>
+                </div>
             </div>
             {% endfor %}
         </div>
-        <div class="col-6 droporder drop">
+        <div class="col-4 droporder drop">
             <div class="row bluebox">
                 <span class="title2">Order Here</span>
             </div>
             {% for num, step, gif in parkingType.steps %}
             <div class="row stepdetail dropbox" data-order="{{num}}">
-                <span>Step {{num}}</span>
+                <span>{{step}}</span>
             </div>
             {% endfor %}
         </div>
+        <div class="col-1"></div>
+        <div class="col-6 centeralign">
+            <div class="fullGif">
+                <div class="text hint">Hover here to see hint!</div>
+                <div class='overlay'>
+                    <img src={{parkingType.fullGif}} width=100%>
+                </div>
+            </div>
+        </div>
+
     </div>
 
     <div class="row buttons">
         <button class='quizButtons' id='showresult'>See Results</button>
     </div>
 
-    <div class="row">
-        <div class="col-md-12">
-
-            <div class="fullGif">
-                <div class="text hint">Hover here to see hint!</div>
-                <div class='overlay'>
-                    <img src={{parkingType.fullGif}} width=60%>
-                </div>
-            </div>
-        </div>
-    </div>
 
 
     <div class="row">

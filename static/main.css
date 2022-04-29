@@ -14,24 +14,24 @@
   padding: 10px
 }
 
-.prev{
+.prev {
   margin-top: 120px;
 }
 
 
-.topMar{
+.topMar {
   margin-top: 60px;
 }
 
 
-.next{
+.next {
   margin-top: 120px;
 }
 
 .nameTitle {
   margin-top: 20px;
   font-size: 45px;
-  font-weight:  bold;
+  font-weight: bold;
   color: #525252;
   display: flex;
   justify-content: center;
@@ -42,7 +42,7 @@
 .nameTitleQuiz {
   margin-top: 20px;
   font-size: 45px;
-  font-weight:  bold;
+  font-weight: bold;
   color: #525252;
   display: flex;
   justify-content: center;
@@ -50,15 +50,15 @@
   margin-bottom: 60px;
 }
 
-.blockBackground{
+.blockBackground {
   background-color: #f8f8ff;
 }
 
-.tipImage{
-    height: auto; 
-    width: auto; 
-    max-width: 100px; 
-    max-height: 100px;
+.tipImage {
+  height: auto;
+  width: auto;
+  max-width: 100px;
+  max-height: 100px;
 }
 
 .stepGif {
@@ -90,7 +90,7 @@
   text-align: center;
 }
 
-.welcomeInteractive{
+.welcomeInteractive {
   font-weight: bold;
   display: flex;
   justify-content: center;
@@ -101,14 +101,14 @@
   color: #525252;
 }
 
-.welcomeLearn{
-  font-weight:  bold;
+.welcomeLearn {
+  font-weight: bold;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 50px;
   font-size: 40px;
-  margin-bottom:  20px;
+  margin-bottom: 20px;
   color: #525252;
 }
 
@@ -120,10 +120,10 @@
   font-size: 20px !important;
 }
 
-.homeImage{
+.homeImage {
   height: 275px;
-  width:  200px;
-  margin-left:  25px;
+  width: 200px;
+  margin-left: 25px;
   margin-top: -90px;
 }
 
@@ -135,8 +135,8 @@
   align-items: center;
 }
 
-.iconHome{
-  border-style: dotted ;
+.iconHome {
+  border-style: dotted;
   border-width: 3px;
   border-color: #f8f8ff;
 }
@@ -147,7 +147,7 @@
   align-items: center;
   margin-top: 20px;
   font-size: 20px;
-  padding-top:  10px;
+  padding-top: 10px;
 }
 
 .startButton {
@@ -160,14 +160,14 @@
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-weight:  bold;
+  font-weight: bold;
   margin: 4px;
   cursor: pointer;
   border-style: solid;
   border-width: 4px;
   border-color: #f8f8ff;
-  width:  500px;
-  height:   100px;
+  width: 500px;
+  height: 100px;
   margin-top: 60px;
 }
 
@@ -224,8 +224,10 @@
   border-radius: 15px;
 }
 
+/*drag-drop quiz styles*/
+
 .title2 {
-  display: inline-block;
+  /* display: inline-block; */
   vertical-align: middle;
   line-height: 78px;
 }
@@ -240,22 +242,60 @@
   background-color: lightblue;
 }
 
-.namebox {
-  border: 1px solid lightgray;
-  padding-left: 0px;
-  margin-right: 40px;
-  width: 100%;
-  height: 60px;
-  /* width: 150px; */
-  /* height: auto; */
+
+#badge-ribbon {
+  position: relative;
+  background: #007bff;
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+  border: 5px solid lightgray;
 }
 
-.dropbox {
-  border: 1px solid lightgray;
-  background-color: lightgray;
+#badge-ribbon:before,
+#badge-ribbon:after {
+  content: '';
+  position: absolute;
+  border-bottom: 35px solid #007bff;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  top: 35px;
+  left: -10px;
+  transform: rotate(-140deg);
+  /* border: 5px solid lightgray; */
+}
+
+#badge-ribbon:after {
+  left: auto;
+  right: -10px;
+  transform: rotate(140deg);
+}
+
+.ordernum {
+  font-size: larger;
+  font-weight: bold;
+  color: white;
+  margin-left: 15px;
+  margin-top: 30px !important;
+}
+
+.namebox {
+  /* border: 1px solid lightgray; */
   padding-left: 0px;
   margin-right: 40px;
   width: 100%;
+  height: 80px;
+}
+
+
+.dropbox {
+  vertical-align: middle !important;
+  /* text-align: center; */
+  border: 1px solid lightgray;
+  background-color: lightgray;
+  /* padding-left: 0px; */
+  /* margin-right: 40px; */
+  /* width: 100%; */
   height: 80px;
   /* width: 150px; */
   /* height: auto; */
@@ -265,21 +305,28 @@
   text-align: center;
   color: white;
   font-size: 20px;
-  position: absolute;
+  text-align: center;
+  vertical-align: middle;
+  /* position: absolute; */
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  height: 60px;
+  height: 78px;
   width: 100%;
   opacity: 1;
   transition: .5s ease;
   background-color: #008CBA;
+}
 
+.centeralign {
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
 }
 
 .overlay {
-  position: absolute;
+  /* position: absolute; */
   text-align: center;
   top: 0;
   bottom: 0;
@@ -300,6 +347,8 @@
   opacity: 1;
 }
 
+/* end of drag-drop quiz */
+
 .tipButtons {
   background-color: #007bff;
   border: none;
@@ -317,17 +366,17 @@
   border-radius: 15px;
 }
 
-.tipButtonClass{
+.tipButtonClass {
   text-align: center;
 }
 
-.tipDiv{
+.tipDiv {
   padding-top: 30px;
   padding-bottom: 30px;
   margin-top: 50px;
 }
 
-.eachTip{
+.eachTip {
   padding-top: 30px;
   text-align: right !important;
   margin-right: 220px;

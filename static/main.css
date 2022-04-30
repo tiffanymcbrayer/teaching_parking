@@ -126,7 +126,7 @@
   margin-top: 50px;
   font-size: 60px;
   margin-bottom: 60px;
-  color: #525252;
+  color: black;
 }
 
 .welcomeLearn {
@@ -157,12 +157,9 @@
 }
 
 .homeImage {
-  height: 275px;
-  width: 200px;
-  margin-left: 25px;
-  margin-top: -90px;
+  margin: 13px;
+  width: 90%;
 }
-
 .start {
   margin-top: 50px;
   font-size: 20px !important;
@@ -170,23 +167,39 @@
   justify-content: center;
   align-items: center;
 }
-
-.iconHome {
-  border-style: dotted;
-  border-width: 3px;
-  border-color: #f8f8ff;
-}
-
 .welcome {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
+  margin-top: 10px;
   font-size: 20px;
   padding-top: 10px;
 }
+.iconHome {
+  border: 2px solid rgb(65, 69, 92);
+  background-color: white;
+} 
 
-.startButton {
+.startButton{
+  background-color: rgb(72, 142, 191);
+  color: white;
+  border-style: solid;
+  border-width: 10px;
+  border-color: rgb(72, 142, 191);
+  border-radius: 10px;
+  font-size: 30px;
+  width: 300px;
+  text-decoration: none;
+  text-align: center;
+  margin-left: 425px;
+}
+.homePicContainer{
+  margin-left: 5px;
+  margin-right:  -5px;
+  background-color: white;
+}
+
+/* .startButton {
   background-color: #007bff;
   border-radius: 15px;
   border: none;
@@ -205,7 +218,7 @@
   width: 500px;
   height: 100px;
   margin-top: 60px;
-}
+} */
 
 .prevButtons {
   background-color: rgb(72, 142, 191);

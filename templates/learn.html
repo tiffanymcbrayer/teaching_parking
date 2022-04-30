@@ -13,78 +13,69 @@
     let prevName = '{{prevType.name}}'
 </script>
 
-
-<body style="background-color:#87cefa;">
-
-<div class="row topMar">
-    <div class="col-md-2">
+<div class = "container">
+    <br>
+    
+    <!-- prev button -->
+    <div class="col-md-1">
+        <div class="prev">
+        </div>
     </div>
-    <div class="col-md-8 blockBackground">
-            <div class="nameTitle">
-                {{parkingType.name}}
+
+    <div class="col-md-1">
+    </div>
+
+    <div class="col-md-8 stepContainer">
+        <div class="col-md-1">
+        </div>
+        <div class="col-md-10">
+            <!-- parking name -->
+            <div class="col-md-10">
+                <div class="nameTitle">
+                    {{parkingType.name}}
+                </div>
             </div>
-    </div>
-    <div class="col-md-2">
-    </div>
-</div>
 
-<div class="row">
-    <div class="col-md-2 prev">
-    </div>
-    <div class="col-md-8 blockBackground">
+            <!-- video -->
             <div class="stepGif">
                 <img src={{step[2]}} class = "freezeframe">
             </div>
-    </div>
-    <div class="col-md-2 next">
-    </div>
-</div>
 
-<div class="row">
-    <div class="col-md-2">
-    </div>
-    <div class="col-md-8 stepName">
-            {% if step[0] != lastStep%}
-                 Step {{step[0]}}
-            {% endif %}
-            {% if step[0] == lastStep%}
-                 Summary GIF
-            {% endif %}
-    </div>
-    <div class="col-md-2">
-    </div>
-</div>
+            
 
-<div class="row">
-    <div class="col-md-2">
-    </div>
-    <div class="col-md-8 stepExp">
-        {% if step[0] != lastStep%}
-            {{step[1]}}
-        {% endif %}
-    </div>
-    <div class="col-md-2">
-    </div>
-</div>
-
-<div class="row">
-    <div class="col-md-2">
-    </div>
-    <div class="col-md-8 tipDiv">
-        {% if step[0] == lastStep%}
-            <div id="tipDivId" class = "tipButtonClass">
-            {% for tip, img in parkingType.tips %}
-                <div class = "eachTip">
-                    <span class = "tip">
-                        {{tip}}
-                    </span>
-                        <img src={{img}} class = "tipImage">
+            <!-- step explanation -->
+            <div class="col-md-2">
+                <!-- Step # -->
+                <div class="stepName">
+                    {% if step[0] != lastStep%}
+                        Step {{step[0]}}
+                    {% endif %}
+                    {% if step[0] == lastStep%}
+                        Summary GIF
+                    {% endif %}
                 </div>
-                {% endfor %} 
-            </div>   
-        {% endif %}
+            </div>
+            <div class="col-md-10">
+                <div class="stepExp">
+                    {% if step[0] != lastStep%}
+                        {{step[1]}}
+                    {% endif %}
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-1">
+        </div>
+        
     </div>
-    <div class="col-md-2">
+
+    <div class="col-md-1">
+    </div>
+
+    <!-- next button -->
+    <div class="col-md-1">
+        <div class="next">
+        </div>
     </div>
 </div>
 </body>

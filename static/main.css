@@ -15,7 +15,7 @@
 }
 
 .prev {
-  margin-top: 120px;
+  margin-top: 200px;
 }
 
 
@@ -25,10 +25,44 @@
 
 
 .next {
-  margin-top: 120px;
+  margin-top: 200px;
 }
 
-.nameTitle {
+.stepContainer{
+  background-color: white;
+  box-shadow: 20px 10px 10px rgb(72, 142,191 );
+  border: 2px solid rgb(65, 69, 92);
+}
+
+.nameTitle{
+  padding-top:25px;
+  padding-bottom: 25px;
+  font-size: 20px;
+  font-weight: 500;
+}
+.stepName {
+  padding-top:15px;
+  padding-bottom: 25px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.stepExp{
+  padding-top:15px;
+  padding-bottom: 25px;
+  font-size: 20px;
+}
+.stepGif {
+  padding: 0px;
+  text-align: center;
+  
+}
+.gif{
+  width: 30%;
+  text-align: center;
+}
+
+/* .nameTitle {
   margin-top: 20px;
   font-size: 45px;
   font-weight: bold;
@@ -37,7 +71,7 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 60px;
-}
+} */
 
 .nameTitleQuiz {
   margin-top: 20px;
@@ -61,16 +95,10 @@
   max-height: 100px;
 }
 
-.stepGif {
-  padding: 0px;
-  text-align: center;
-  width: 600px;
-  height: 338px;
-  margin-left: 70px;
-}
 
 
-.stepName {
+
+/* .stepName {
   padding-top: 60px;
   font-size: 35px;
   font-weight: bold;
@@ -79,16 +107,16 @@
   background-color: #f8f8ff;
   width: 760px;
   text-align: center;
-}
+} */
 
-.stepExp {
+/* .stepExp {
   font-size: 20px;
   padding-top: 20px;
   padding-bottom: 30px;
   color: #525252;
   background-color: #f8f8ff;
   text-align: center;
-}
+} */
 
 .welcomeInteractive {
   font-weight: bold;
@@ -112,12 +140,20 @@
   color: #525252;
 }
 
+.navbar{
+  background-color: rgb(72, 142, 191);
+  color: white
+}
+
+
 .navbar-brand {
   font-size: 25px !important;
+  color: white !important;
 }
 
 .nav-link {
   font-size: 20px !important;
+  color: white !important;
 }
 
 .homeImage {
@@ -172,39 +208,28 @@
 }
 
 .prevButtons {
-  background-color: #007bff;
+  background-color: rgb(72, 142, 191);
   color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px;
-  cursor: pointer;
   border-style: solid;
   border-width: 4px;
-  border-color: #f8f8ff;
-  border-radius: 15px;
-  width: 150px;
-  height: 105px;
+  border-color: rgb(72, 142, 191);
+  border-radius: 10px;
+  font-size: 16px;
+  width: 130px;
+  text-decoration: none;
 }
 
 .nextButtons {
-  background-color: #007bff;
+  background-color: rgb(72, 142, 191);
   color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px;
-  cursor: pointer;
   border-style: solid;
   border-width: 4px;
-  border-color: #f8f8ff;
-  border-radius: 15px;
-  width: 150px;
-  height: 105px;
+  border-color: rgb(72, 142, 191);
+  border-radius: 10px;
+  margin:0px;
+  font-size: 16px;
+  width: 130px;
+  text-decoration: none;
 }
 
 .quizButtons {

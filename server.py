@@ -427,7 +427,7 @@ def quiz(q_num=None):
             return render_template('quiz.html', end=0, total_num=QUIZ_NUM, q_num=q_num, response=response, question=question)
         elif questions[q]["type"] == "order":
             parkingType = quiz2[str(questions[q]["ord"])]
-            return render_template('quiz2.html', parkingType=parkingType)
+            return render_template('quiz2.html', parkingType=parkingType, total_num=QUIZ_NUM, q_num=q_num)
 
 
 '''@app.route('/quiz2/<q_num>')

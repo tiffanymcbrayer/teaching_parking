@@ -43,6 +43,7 @@ $(document).ready(function () {
     })(jQuery);
 
     $('.stepsdiv').randomize('.namebox');
+    $('.detailsdiv').randomize('.dropbox');
 
     $('.dragbox').hover(function () {
         $(this).css('background-color', 'orange')
@@ -56,7 +57,7 @@ $(document).ready(function () {
         stack: '.dragbox',
         start: function (event, ui) {
             console.log($(this).data('from'))
-            $('.dropbox').css('background-color', '#37839c')
+            $('.dropbox').css('background-color', 'lightblue')
         },
         stop: function (event, ui) {
             $('.dropbox').css('background-color', 'lightgray')
@@ -69,17 +70,17 @@ $(document).ready(function () {
         tolerance: 'pointer',
 
         drop: function (event, ui) {
-            $(ui.draggable).detach().css({ top: -40, left: -50 }).appendTo(this);
+            $(ui.draggable).detach().css({ top: -0, left: -50 }).appendTo(this);
             $(this).data("step", $(ui.draggable).data("step"));
             console.log(this)
             console.log("Data step " + $(this).data("step"));
             console.log("Data order " + $(ui.draggable).data("step"));
         },
         over: function (event, ui) {
-            $(this).css('background-color', '#114a5e')
+            $(this).css('background-color', '#37839c')
         },
         out: function (event, ui) {
-            $(this).css('background-color', '#37839c')
+            $(this).css('background-color', 'lightblue')
         }
     });
 

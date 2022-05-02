@@ -57,7 +57,7 @@ $(document).ready(function () {
         stack: '.dragbox',
         start: function (event, ui) {
             console.log($(this).data('from'))
-            $('.dropbox').css('background-color', 'lightblue')
+            $('.dropbox').css('background-color', '#FFEB8A')
         },
         stop: function (event, ui) {
             $('.dropbox').css('background-color', 'lightgray')
@@ -77,10 +77,10 @@ $(document).ready(function () {
             console.log("Data order " + $(ui.draggable).data("step"));
         },
         over: function (event, ui) {
-            $(this).css('background-color', '#37839c')
+            $(this).css('background-color', '#ffd500')
         },
         out: function (event, ui) {
-            $(this).css('background-color', 'lightblue')
+            $(this).css('background-color', '#FFEB8A')
         }
     });
 

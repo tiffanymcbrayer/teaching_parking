@@ -10,8 +10,8 @@
     let response = {{ response| tojson }}
     let question = {{ question| tojson }}
 </script>
-<div class="col-md-12 mcContainer">
-    <div class="row nameTitleQuiz">
+<div class="col-md-12 mcContainer bk-white">
+    <div class="row nameTitleQuiz base">
         Quiz
     </div>
     <div class="row">
@@ -71,7 +71,7 @@
             </div>
         </div>
         <div class="col-md-4 stepNameQuiz">
-            <span class="progressQuiz">
+            <span class="progressQuiz lightgray">
                 {% if q_num %}
                 {{q_num}}/{{total_num}}
                 {% endif %}

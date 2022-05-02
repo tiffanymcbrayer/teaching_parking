@@ -2,12 +2,40 @@
   color: white;
 }
 
+.lightgray {
+  color: lightgray;
+}
+
+.darkgray {
+  color: darkgray;
+}
+
+.bk-lightgray {
+  background-color: lightgray;
+}
+
+.bk-darkgray {
+  background-color: darkgray;
+}
+
 .bk-white {
   background-color: white;
 }
 
 .bk-base {
-  background-color: #1c78ef;
+  background-color: rgb(72, 142, 191);
+}
+
+.base{
+  color: rgb(72, 142, 191);
+}
+
+.bk-accent{
+  background-color: #ffeb8a;
+}
+
+.accent{
+  color: #ffeb8a;
 }
 
 .eachStep {
@@ -36,14 +64,12 @@
 }
 
 .stepContainer {
-  background-color: white;
-  box-shadow: 20px 10px 10px rgb(72, 142, 191);
+  box-shadow: 20px 10px 10px #ffeb8a;
   border: 2px solid rgb(65, 69, 92);
 }
 
 .mcContainer {
-  background-color: white;
-  box-shadow: 20px 10px 10px rgb(72, 142, 191);
+  box-shadow: 20px 10px 10px #ffeb8a;
   border: 2px solid rgb(65, 69, 92);
 }
 
@@ -93,7 +119,6 @@
   margin-top: 20px;
   font-size: 45px;
   font-weight: bold;
-  color: #525252;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -255,7 +280,7 @@
 .mcButtons {
   background-color: rgb(72, 142, 191);
   border: none;
-  color: white;
+  color: #ffeb8a;
   padding: 8px 15px;
   text-align: center;
   text-decoration: none;
@@ -265,7 +290,7 @@
   cursor: pointer;
   border-style: solid;
   border-width: 4px;
-  border-color: #f8f8ff;
+  border-color: #ffeb8a;
   border-radius: 15px;
 }
 

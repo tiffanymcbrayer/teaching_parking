@@ -71,12 +71,12 @@ $(document).ready(function () {
 
         drop: function (event, ui) {
             $(ui.draggable).detach().css({ top: -0, left: -50 }).prependTo(this);
-            if ($(this).children('.dragbox').length == 1) {
-                $(this).data("step", $(ui.draggable).data("step"));
-            }
-            console.log(this)
-            console.log("Data step " + $(this).data("step"));
-            console.log("Data order " + $(ui.draggable).data("step"));
+            // if ($(this).children('.dragbox').length == 1) {
+            //     $(this).data("step", $(ui.draggable).data("step"));
+            // }
+            // console.log(this)
+            // console.log("Data step " + $(this).data("step"));
+            // console.log("Data order " + $(ui.draggable).data("step"));
         },
         over: function (event, ui) {
             $(this).css('background-color', '#ffd500')
@@ -113,7 +113,7 @@ $(document).ready(function () {
         console.log("###############################")
         $('.dropbox').each(function (e) {
             console.log($(this).data("step"))
-            if (!$(this).data('step')) {
+            if ($(this).children('.dragbox').length == 0) {
                 pass = false;
             }
         })
@@ -124,9 +124,10 @@ $(document).ready(function () {
                 hoverColor($("#next"))
             }
             $('.dropbox').each(function (e) {
-                console.log($(this).data('step'))
+                // console.log($(this).data('step'))
                 console.log($(this).data('order'))
-                if ($(this).data("step") == $(this).data("order")) {
+                console.log($(this).children('.dragbox').data('step'))
+                if ($(this).children('.dragbox').data('step') == $(this).data("order")) {
                     $(this).css("background-color", "green")
                 } else {
                     $(this).css("background-color", "red")

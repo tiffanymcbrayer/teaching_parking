@@ -49,7 +49,7 @@ $(document).ready(function () {
         $(this).css('background-color', 'orange')
         $(this).css('cursor', 'move')
     }, function () {
-        $(this).css('background-color', '#007bff')
+        $(this).css('background-color', 'rgb(72, 142, 191)')
         $(this).css('cursor', 'default')
     })
     $('.dragbox').draggable({
@@ -60,8 +60,8 @@ $(document).ready(function () {
             $('.dropbox').css('background-color', '#FFEB8A')
         },
         stop: function (event, ui) {
-            $('.dropbox').css('background-color', 'lightgray')
-            $(this).css('background-color', '#007bff')
+            $('.dropbox').css('background-color', 'darkgray')
+            $(this).css('background-color', 'rgb(72, 142, 191)')
             $(this).css('cursor', 'default')
         },
     });

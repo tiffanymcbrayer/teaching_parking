@@ -201,145 +201,66 @@ questions = {
         "answer-img": "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/quizPics/q5_asw.gif?raw=true"
     },
     "6": {
+        'ord': 6,
         "type": "order",
-        "ord": 0,
         "name": "Forwards Parking",
-        "steps": [[1, "Drive forward until the :carterms: lines up with the parking line"],
-                  [2,
-                   "Turn the wheel to your :directions: and move forward into space"],
-                  [3, "Once you are centered in the spot, straighten the wheel and move up to the line"]],
-
-        "answers": {1: 'mirror',
-                    2: 'right'},
-
-        "fullGif": "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/forwards.gif?raw=true"
+        "steps": [["1", "Drive forward until the mirror lines up with the parking line", "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/forwards_p1.gif?raw=true"],
+                  ["2", "Turn the wheel to your right and move forward into space",
+                      "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/forwards_p2.gif?raw=true"],
+                  ["3", "Once you are centered in the spot, straighten the wheel and move up to the line ",
+                      "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/forwards_p3.gif?raw=true"]],
+        "fullGif": "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/forwards.gif?raw=true",
+        "tips": [["Mirror inline with parking line", "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/forwards_tip1.png?raw=true"]],
+        "numsteps": "4"
     },
     "7": {
+        'ord': 7,
         "type": "order",
-        'ord': 1,
         "name": "Reverse Parking",
-        "steps": [[1, "Drive forward until the :carterms: lines up with the parking line (keep close to the space)"],
-                  [2,
-                      "Turn the wheel to your :directions: and go forward until you see edge of parking line in left mirror"],
-                  [3,
-                      "Straighten the wheel until you align your :directions: mirror with the edge of the car to your right"],
-                  [4,
-                      "Turn the wheel to the :directions: and reverse until you are centered in the spot"],
-                  [5, "Once you are centered in the spot, straighten the wheel and move up to the line"]],
-        "answers": {1: 'mirror',
-                    2: 'left',
-                    3: 'right',
-                    4: 'right'},
-        "fullGif": "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/reverse.gif?raw=true"
-
+        "steps": [["1", "Drive forward until the mirror lines up with the parking line (keep close to the space)", "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/reverse_p1.gif?raw=true"],
+                  ["2", "Turn the wheel to your left and go forward until you see edge of parking line in left mirror",
+                      "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/reverse_p2.gif?raw=true"],
+                  ["3", "Straighten the wheel until you align your right mirror with the edge of the car to your right ",
+                      "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/reverse_p3.gif?raw=true"],
+                  ["4", "Turn the wheel to the right and reverse until you are centered in the spot",
+                   "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/reverse_p4.gif?raw=true"],
+                  ["5", "Once you are centered in the spot, straighten the wheel and move up to the line ",
+                      "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/reverse_p5.gif?raw=true"]],
+        "fullGif": "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/reverse.gif?raw=true",
+        "tips": [["Mirror inline with second parking line", "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/reverse_tip1.png?raw=true"], ["Mirror inline with back bumper", "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/reverse_tip2.png?raw=true"]],
+        "numsteps": "6"
     },
     "8": {
+        'ord': 8,
         "type": "order",
-        'ord': 2,
         "name": "Angled Parking",
-        "steps": [[1, "Drive forward until the :carterms: lines up with the parking line"],
-                  [2,
-                      "Turn the wheel to your :directions: and go forward into space"],
-                  [3, "Once you are centered in the spot, straighten the wheel and move up to the line "]],
-
-        "answers": {1: 'mirror',
-                    2: 'left'},
-        "fullGif": "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/angled.gif?raw=true"
-
+        "steps": [["1", "Drive forward until the mirror lines up with the parking line", "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/angled_p1.gif?raw=true"],
+                  ["2", "Turn the wheel to your left and go forward into space",
+                      "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/angled_p2.gif?raw=true"],
+                  ["3", "Once you are centered in the spot, straighten the wheel and move up to the line ",
+                      "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/angled_p3.gif?raw=true"]],
+        "fullGif": "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/angled.gif?raw=true",
+        "tips": [["Mirror inline with parking line", "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/angled_tip1.png?raw=true"]],
+        "numsteps": "4"
     },
     "9": {
+        'ord': 9,
         "type": "order",
-        'ord': 3,
         "name": "Parallel Parking",
-        "steps": [[1, "Drive forward until your car is in line with :roadterms: (keep a reasonably close distance to the car)"],
-                  [2,
-                      "Turn the wheel all the way to your right and reverse until you can see the :roadterms: through the mirror "],
-                  [3,
-                      "Straighten out the wheel and back in until you align your right mirror with :roadterms: in front"],
-                  [4,
-                      "Turn the wheel :directions: and back up until you have no more space"],
-                  [5, "Once you are centered in the spot, straighten the wheel and move up until you are in the middle of the spot"]],
-        "answers": {1: 'the car next to you',
-                    2: 'parking line corner',
-                    3: 'the other car',
-                    4: 'left'},
-        "fullGif": "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/parallel.gif?raw=true"
+        "steps": [["1", "Drive forward until your car is in line with the car next to you (keep a reasonably close distance to the car)", "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/parallel_p1.gif?raw=true"],
+                  ["2", "Turn the wheel all the way to your right and reverse until you can see the back corner through the mirror ",
+                      "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/parallel_p2.gif?raw=true"],
+                  ["3", "Straighten out the wheel and back in until you align your right mirror with the left bumper of the car in front",
+                   "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/parallel_p3.gif?raw=true"],
+                  ["4", "Turn the wheel left and back up until you have no more space",
+                   "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/parallel_p4.gif?raw=true"],
+                  ["5", "Once you are centered in the spot, straighten the wheel and move up until you are in the middle of the spot",
+                      "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/parallel_p5.gif?raw=true"]],
+        "fullGif": "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/parallel.gif?raw=true",
+        "tips": [["Mirror inline with back corner", "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/parallel_tip1.png?raw=true"], ["Mirror inline with back bumper", "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/parallel_tip2.png?raw=true"]],
+        "numsteps": "6"
     }
 }
-
-#########################################
-# Save for future use
-#########################################
-# questions2 = {
-#     "0": {
-#         'ord': 0,
-#         "name": "Forwards Parking",
-#         "steps": [[1, "Drive forward until the :carterms: lines up with the parking line"],
-#                   [2,
-#                       "Turn the wheel to your :directions: and move forward into space"],
-#                   [3, "Once you are centered in the spot, straighten the wheel and move up to the line"]],
-
-#         "answers": {1: 'mirror',
-#                     2: 'right'},
-
-#         "fullGif": "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/forwards.gif?raw=true"
-
-#     },
-#     "1": {
-#         'ord': 1,
-#         "name": "Reverse Parking",
-#         "steps": [[1, "Drive forward until the :carterms: lines up with the parking line (keep close to the space)"],
-#                   [2,
-#                       "Turn the wheel to your :directions: and go forward until you see edge of parking line in left mirror"],
-#                   [3,
-#                       "Straighten the wheel until you align your :directions: mirror with the edge of the car to your right"],
-#                   [4,
-#                       "Turn the wheel to the :directions: and reverse until you are centered in the spot"],
-#                   [5, "Once you are centered in the spot, straighten the wheel and move up to the line"]],
-#         "answers": {1: 'mirror',
-#                     2: 'left',
-#                     3: 'right',
-#                     4: 'right'},
-#         "fullGif": "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/reverse.gif?raw=true"
-
-#     },
-#     "2": {
-#         'ord': 2,
-#         "name": "Angled Parking",
-#         "steps": [[1, "Drive forward until the :carterms: lines up with the parking line"],
-#                   [2,
-#                       "Turn the wheel to your :directions: and go forward into space"],
-#                   [3, "Once you are centered in the spot, straighten the wheel and move up to the line "]],
-
-#         "answers": {1: 'mirror',
-#                     2: 'left'},
-#         "fullGif": "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/angled.gif?raw=true"
-
-#     },
-#     "3": {
-#         'ord': 3,
-#         "name": "Parallel Parking",
-#         "steps": [[1, "Drive forward until your car is in line with :roadterms: (keep a reasonably close distance to the car)"],
-#                   [2,
-#                       "Turn the wheel all the way to your right and reverse until you can see the :roadterms: through the mirror "],
-#                   [3,
-#                       "Straighten out the wheel and back in until you align your right mirror with :roadterms: in front"],
-#                   [4,
-#                       "Turn the wheel :directions: and back up until you have no more space"],
-#                   [5, "Once you are centered in the spot, straighten the wheel and move up until you are in the middle of the spot"]],
-#         "answers": {1: 'the car next to you',
-#                     2: 'parking line corner',
-#                     3: 'the other car',
-#                     4: 'left'},
-#         "fullGif": "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/parallel.gif?raw=true"
-#     }
-# }
-
-# directions = ['left', 'right']
-# carterms = ['mirror', 'front wheel', 'rear wheel']
-# roadterms = ['parking line corner', 'parking line end',
-#              'the car next to you', "the other car's bumper"]
-
 
 response = {
     "num": 0,
@@ -348,12 +269,12 @@ response = {
     "score": 0
 }
 
-'''response2 = {
+response2 = {
     "num": 0,
     "q_num": [],
     "ans": [],
     "score": 0
-}'''
+}
 
 
 @app.route('/')
@@ -426,7 +347,7 @@ def quiz(q_num=None):
             }
             return render_template('quiz.html', end=0, total_num=QUIZ_NUM, q_num=q_num, response=response, question=question)
         elif questions[q]["type"] == "order":
-            parkingType = quiz2[str(questions[q]["ord"])]
+            parkingType = questions[str(questions[q]["ord"])]
             return render_template('quiz2.html', parkingType=parkingType, total_num=QUIZ_NUM, q_num=q_num)
 
 

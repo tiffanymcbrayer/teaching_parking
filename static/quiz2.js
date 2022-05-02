@@ -42,7 +42,7 @@ $(document).ready(function () {
         }
     })(jQuery);
 
-    $('.stepsdiv').randomize('.namebox');
+    // $('.stepsdiv').randomize('.namebox');
     $('.detailsdiv').randomize('.dropbox');
 
     $('.dragbox').hover(function () {
@@ -70,7 +70,7 @@ $(document).ready(function () {
         tolerance: 'pointer',
 
         drop: function (event, ui) {
-            $(ui.draggable).detach().css({ top: -0, left: -50 }).appendTo(this);
+            $(ui.draggable).detach().css({ top: -0, left: -50 }).prependTo(this);
             $(this).data("step", $(ui.draggable).data("step"));
             console.log(this)
             console.log("Data step " + $(this).data("step"));
@@ -115,8 +115,8 @@ $(document).ready(function () {
                 pass = false;
             }
         })
+        console.log("Page " + ordnum)
         if (pass) {
-            console.log("Page " + ordnum)
             if ($('#next').length == 0) {
                 $('.buttons').append("<button class='quizButtons' id='next'>Next Question</button>")
                 hoverColor($("#next"))

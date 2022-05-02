@@ -330,8 +330,9 @@ def submit_response2():
     score = int(json_data['ans'])
     response["num"] += 1
     response["score"] += score
+    print("Score + {} = {}".format(score, response["score"]))
     # TODO: Add response2 updating
-    return jsonify(response=response2)
+    return jsonify(response=response)
 
 
 if __name__ == '__main__':

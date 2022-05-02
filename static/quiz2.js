@@ -134,6 +134,11 @@ $(document).ready(function () {
                     allcorrect = false
                 }
             })
+            if (allcorrect) {
+                console.log("All correct")
+            } else {
+                console.log("Incorrect")
+            }
         } else {
             alert("Please drop ALL the steps to ALL the all orders!")
         }

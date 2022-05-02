@@ -93,8 +93,8 @@ $(document).ready(function () {
             contentType: 'application/json, charset=utf-8',
             data: JSON.stringify(c),
             success: function (result) {
-                console.log(result)
-                score = parseInt(result['response']['score'])
+                //console.log(result)
+                //score = parseInt(result['response']['score'])
             },
             error: function (request, status, error) {
                 console.log('Error')

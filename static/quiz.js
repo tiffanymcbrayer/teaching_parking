@@ -16,7 +16,7 @@ function hoverColor(button){
         button.css('background-color', '#77b5fe'); //how to change back after?
     });
     button.mouseout(function(){
-        button.css('background-color', '#007bff'); //how to change back after?
+        button.css('background-color', 'rgb(72, 142, 191)'); //how to change back after?
     });
 }
 
@@ -81,7 +81,8 @@ $(document).ready(function () {
                 window.location.href = '/quiz/start'
             })
         } else {
-            $('#goal').append("<span class='ml-5 stepNameQuiz'>" + question['goal'] + "</span>")
+            $('#selectionTitle').text("Select an Answer Choice:")
+            $('#goal').append("<span class='stepNameQuiz'>" + question['goal'] + "</span>")
             $('#question').append("<span class='stepNameQuiz'>" + question['question'] + "</span>")
             $.each(question['choice-img'], function (index, value) {
                 let choice = CHOICES[index]
@@ -102,6 +103,11 @@ $(document).ready(function () {
             $(document).on('click', '#next', function (e) {
                 window.location.href = '/quiz/' + (parseInt(q_num) + 1).toString()
             });
+
+            hoverColor($('#A'))
+            hoverColor($('#B'))
+            hoverColor($('#C'))
+            hoverColor($('#D'))
         }
     }
 })

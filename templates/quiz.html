@@ -11,22 +11,26 @@
     let question = {{ question| tojson }}
 </script>
 <div class="col-md-12 mcContainer bk-white">
-    <div class="row nameTitleQuiz base">
-        Quiz
+    <div class="row leftMar">
+        <div class="col-md-6">
+            <div class="goalTitle row" id="goal">
+            </div>
+        </div>
+        <div class="col-md-5"></div>
+        <div class="col-md-1 darkgray goalTitle">
+            {% if q_num %}
+            {{q_num}}/{{total_num}}
+            {% endif %}
+        </div>
     </div>
     <div class="row">
         <div class="col-md-8">
-            <div class="row leftMar" id="goal">
-                <span class="bold darkgray stepNameQuiz">
-                    Goal:
-                </span>
-            </div>
-            <br>
             <div class="row leftMar" id="question">
             </div>
             <div class="row leftMar" id="question-img">
             </div>
-            <div class="row"></div>
+            <br>
+            <div class="row selectTitle leftMar" id="selectionTitle"></div>
             <div class="row topMarSmall">
                 <div class="col-md-1"></div>
                 <div class="col-md-4">
@@ -71,11 +75,6 @@
             </div>
         </div>
         <div class="col-md-4 stepNameQuiz">
-            <span class="progressQuiz lightgray">
-                {% if q_num %}
-                {{q_num}}/{{total_num}}
-                {% endif %}
-            </span>
             <div class="row topMarSmall">
                 <div class="col-md-10">
                     <div id='answer' class="row leftMar">

@@ -326,6 +326,7 @@ def submit_response():
 def submit_response2():
     global response
     json_data = request.get_json()
+    print(json_data)
     score = int(json_data['ans'])
     response["num"] += 1
     response["score"] += score

@@ -10,80 +10,87 @@
     let response = {{ response| tojson }}
     let question = {{ question| tojson }}
 </script>
-
-<div class="row nameTitleQuiz">
-    Quiz
-</div>
-<div class="row">
-    <div class="col-md-10">
-        <div class="row" id="goal">
-            <span class="bold darkgray stepNameQuiz">
-                Goal:
-            </span>
+<div class="col-md-12 mcContainer bk-white">
+    <div class="row leftMar">
+        <div class="col-md-6">
+            <div class="goalTitle row" id="goal">
+            </div>
         </div>
-        <br>
-        <div class="row" id="question">
-        </div>
-        <div class="row" id="question-img">
+        <div class="col-md-5"></div>
+        <div class="col-md-1 darkgray goalTitle">
+            {% if q_num %}
+            {{q_num}}/{{total_num}}
+            {% endif %}
         </div>
     </div>
-    <div class="col-md-2 stepNameQuiz">
-        {% if q_num %}
-        {{q_num}}/{{total_num}}
-        {% endif %}
+    <div class="row">
+        <div class="col-md-8">
+            <div class="row leftMar" id="question">
+            </div>
+            <div class="row leftMar" id="question-img">
+            </div>
+            <br>
+            <div class="row selectTitle leftMar" id="selectionTitle"></div>
+            <div class="row topMarSmall">
+                <div class="col-md-1"></div>
+                <div class="col-md-4">
+                    <div class="row leftMar" id="A-img">
+                    </div>
+                    <div class="row" id="A-text">
+                    </div>
+                    <div class="row buttons" id="A-button">
+                        <!-- <button id="A">A</button> -->
+                    </div>
+                </div>
+                <div class="col-md-4 ml-5">
+                    <div class="row leftMar" id="B-img">
+                    </div>
+                    <div class="row" id="B-text">
+                    </div>
+                    <div class="row" id="B-button" class="buttons">
+                        <!-- <button id="B">B</button>-->
+                    </div>
+                </div>
+            </div>
+            <div class="row topMarSmall">
+                <div class="col-md-1"></div>
+                <div class="col-md-4">
+                    <div class="row leftMar" id="C-img">
+                    </div>
+                    <div class="row" id="C-text">
+                    </div>
+                    <div class="row buttons" id="C-button">
+                        <!-- <button id="C">C</button> -->
+                    </div>
+                </div>
+                <div class="col-md-4 ml-5">
+                    <div class="row leftMar" id="D-img">
+                    </div>
+                    <div class="row" id="D-text">
+                    </div>
+                    <div class="row buttons" id="D-button">
+                        <!-- <button id="C">C</button> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 stepNameQuiz">
+            <div class="row topMarSmall">
+                <div class="col-md-10">
+                    <div id='answer' class="row leftMar">
+        
+                    </div>
+                    <div id='answer-img' class="row leftMar">
+        
+                    </div>
+                    <div id='next-button' class="row">
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
-<div class="row"></div>
-<div class="row">
-    <div class="col-md-2">
-        <div class="row" id="A-img">
-        </div>
-        <div class="row" id="A-text">
-        </div>
-        <div class="row buttons" id="A-button">
-            <!-- <button id="A">A</button> -->
-        </div>
-    </div>
-    <div class="col-md-2 ml-5">
-        <div class="row" id="B-img">
-        </div>
-        <div class="row" id="B-text">
-        </div>
-        <div class="row" id="B-button" class="buttons">
-            <!-- <button id="B">B</button>-->
-        </div>
-    </div>
-    <div class="col-md-2 ml-5">
-        <div class="row" id="C-img">
-        </div>
-        <div class="row" id="C-text">
-        </div>
-        <div class="row buttons" id="C-button">
-            <!-- <button id="C">C</button> -->
-        </div>
-    </div>
-    <div class="col-md-2 ml-5">
-        <div class="row" id="D-img">
-        </div>
-        <div class="row" id="D-text">
-        </div>
-        <div class="row buttons" id="D-button">
-            <!-- <button id="C">C</button> -->
-        </div>
-    </div>
-</div>
-<div class="row mb-5"></div>
-<div class="row">
-    <div class="col-md-5">
-        <div id='answer' class="row">
-
-        </div>
-        <div id='answer-img' class="row">
-
-        </div>
-        <div id='next-button' class="row">
-        </div>
-    </div>
+    
+    
 </div>
 
 {% endblock %}

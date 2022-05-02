@@ -42,13 +42,14 @@ $(document).ready(function () {
         }
     })(jQuery);
 
-    $('.stepsdiv').randomize('.namebox');
+    // $('.stepsdiv').randomize('.namebox');
+    $('.detailsdiv').randomize('.dropbox');
 
     $('.dragbox').hover(function () {
         $(this).css('background-color', 'orange')
         $(this).css('cursor', 'move')
     }, function () {
-        $(this).css('background-color', '#007bff')
+        $(this).css('background-color', 'rgb(72, 142, 191)')
         $(this).css('cursor', 'default')
     })
     $('.dragbox').draggable({
@@ -56,11 +57,11 @@ $(document).ready(function () {
         stack: '.dragbox',
         start: function (event, ui) {
             console.log($(this).data('from'))
-            $('.dropbox').css('background-color', '#37839c')
+            $('.dropbox').css('background-color', '#FFEB8A')
         },
         stop: function (event, ui) {
-            $('.dropbox').css('background-color', 'lightgray')
-            $(this).css('background-color', '#007bff')
+            $('.dropbox').css('background-color', 'darkgray')
+            $(this).css('background-color', 'rgb(72, 142, 191)')
             $(this).css('cursor', 'default')
         },
     });
@@ -69,17 +70,17 @@ $(document).ready(function () {
         tolerance: 'pointer',
 
         drop: function (event, ui) {
-            $(ui.draggable).detach().css({ top: -40, left: -50 }).appendTo(this);
+            $(ui.draggable).detach().css({ top: -0, left: -50 }).prependTo(this);
             $(this).data("step", $(ui.draggable).data("step"));
             console.log(this)
             console.log("Data step " + $(this).data("step"));
             console.log("Data order " + $(ui.draggable).data("step"));
         },
         over: function (event, ui) {
-            $(this).css('background-color', '#114a5e')
+            $(this).css('background-color', '#ffd500')
         },
         out: function (event, ui) {
-            $(this).css('background-color', '#37839c')
+            $(this).css('background-color', '#FFEB8A')
         }
     });
 
@@ -92,8 +93,8 @@ $(document).ready(function () {
             contentType: 'application/json, charset=utf-8',
             data: JSON.stringify(c),
             success: function (result) {
-                console.log(result)
-                score = parseInt(result['response']['score'])
+                //console.log(result)
+                //score = parseInt(result['response']['score'])
             },
             error: function (request, status, error) {
                 console.log('Error')
@@ -114,8 +115,8 @@ $(document).ready(function () {
                 pass = false;
             }
         })
+        console.log("Page " + ordnum)
         if (pass) {
-            console.log("Page " + ordnum)
             if ($('#next').length == 0) {
                 $('.buttons').append("<button class='quizButtons' id='next'>Next Question</button>")
                 hoverColor($("#next"))
@@ -147,7 +148,7 @@ $(document).ready(function () {
         } else {
             submit_answer({ 'ans': 0 })
         }
-        window.location.href = '/quiz/' + (parseInt(ordnum) + 1).toString()
+        window.location.href = '/quiz/' + (parseInt(q_num) + 1).toString()
     });
 
 })

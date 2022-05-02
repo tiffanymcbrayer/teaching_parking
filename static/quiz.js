@@ -16,7 +16,7 @@ function hoverColor(button){
         button.css('background-color', '#77b5fe'); //how to change back after?
     });
     button.mouseout(function(){
-        button.css('background-color', '#007bff'); //how to change back after?
+        button.css('background-color', 'rgb(72, 142, 191)'); //how to change back after?
     });
 }
 
@@ -74,20 +74,21 @@ $(document).ready(function () {
         if (!question) {
             $('#goal').empty()
             $('#goal').append("<span class='stepNameQuiz'>Test your knowledge!</span>")
-            $('#question').append('<button class = "quizButtons" id="start">Start</button>')
+            $('#question').append('<button class = "mcButtons centeralign" id="start">Start</button>')
             hoverColor($("#start"))
 
             $('#start').click(function () {
                 window.location.href = '/quiz/start'
             })
         } else {
-            $('#goal').append("<span class='ml-5 stepNameQuiz'>" + question['goal'] + "</span>")
+            $('#selectionTitle').text("Select an Answer Choice:")
+            $('#goal').append("<span class='stepNameQuiz'>" + question['goal'] + "</span>")
             $('#question').append("<span class='stepNameQuiz'>" + question['question'] + "</span>")
             $.each(question['choice-img'], function (index, value) {
                 let choice = CHOICES[index]
                 $('#' + choice + "-img").append("<img class='img-fluid' src='" + this + "'></img>")
                 $('#' + choice + "-text").text(question['choice-text'][index])
-                $('#' + choice + "-button").append("<button id='" + choice + "'>" + choice + "</button>")
+                $('#' + choice + "-button").append("<button class='mcButtons' id='" + choice + "'>" + choice + "</button>")
             })
 
             $(document).on('click', '#A,#B,#C,#D', function (e) {
@@ -102,6 +103,11 @@ $(document).ready(function () {
             $(document).on('click', '#next', function (e) {
                 window.location.href = '/quiz/' + (parseInt(q_num) + 1).toString()
             });
+
+            hoverColor($('#A'))
+            hoverColor($('#B'))
+            hoverColor($('#C'))
+            hoverColor($('#D'))
         }
     }
 })

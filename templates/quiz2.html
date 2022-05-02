@@ -7,18 +7,26 @@
 <script type="text/javascript" src="{{ url_for('static', filename = 'quiz2.js') }}"></script>
 <script>
     let ordnum = '{{parkingType.ord}}'
+    let q_num = '{{q_num}}'
+    let total = '{{total_num}}'
 </script>
 
-<div id="goal">
+<div class="container stepContainer bk-white" id="goal">
     <div class="row">
         <div class="col-md-6">
             <div class="nameTitle">
                 {{parkingType.name}}
             </div>
         </div>
+        <div class="col-md-5"></div>
+        <div class="col-md-1 darkgray nameTitle">
+            {% if q_num %}
+            {{q_num}}/{{total_num}}
+            {% endif %}
+        </div>
     </div>
 
-    <div class="row nondrop">
+    <div class="row nondrop leftMar">
         <div class="col-1 drop stepsdiv">
             <div class="row bluebox stepbox">
                 <span class="title2">Steps</span>
@@ -31,20 +39,19 @@
             </div>
             {% endfor %}
         </div>
-        <div class="col-4 droporder drop">
+        <div class="col-5 droporder drop detailsdiv">
             <div class="row bluebox">
                 <span class="title2">Order Here</span>
             </div>
             {% for num, step, gif in parkingType.steps %}
             <div class="row stepdetail dropbox" data-order="{{num}}">
-                <span>{{step}}</span>
+                <span class="centering">{{step}}</span>
             </div>
             {% endfor %}
         </div>
-        <div class="col-1"></div>
         <div class="col-6 centeralign">
+            <div class="title2 hint">Hover below to see hint!</div>
             <div class="fullGif">
-                <div class="text hint">Hover here to see hint!</div>
                 <div class='overlay'>
                     <img src={{parkingType.fullGif}} width=100%>
                 </div>
@@ -53,8 +60,14 @@
 
     </div>
 
-    <div class="row buttons">
+    <br>
+
+    <div class="row buttons leftMar">
+        <!-- <div class="col-7"> </div> -->
+        <!-- <div class="col-5 buttons"> -->
         <button class='quizButtons' id='showresult'>See Results</button>
+        <!-- </div> -->
+
     </div>
 
 

@@ -16,7 +16,7 @@ function hoverColor(button){
         button.css('border-style', 'dashed');
     });
     button.mouseout(function(){
-        button.css('background-color', '#007bff'); //how to change back after?
+        button.css('background-color', 'rgb(72, 142, 191)'); //how to change back after?
         button.css('border-style', 'solid');
     });
 }

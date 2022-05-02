@@ -354,6 +354,7 @@
 }
 
 .centering {
+  width: 85%;
   text-align: left !important;
   vertical-align: top;
   /* margin-left: 25px; */
@@ -364,7 +365,7 @@
 .dropbox {
   /* display: inline-block; */
   /* vertical-align: middle !important; */
-  /* text-align: center; */
+  /* text-align: right; */
   border: 1px solid lightgray;
   background-color: lightgray;
   /* width: 100%; */

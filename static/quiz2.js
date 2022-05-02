@@ -142,7 +142,7 @@ $(document).ready(function () {
     $(document).on('click', '#next', function (e) {
         var allcorrect = true
         $('.dropbox').each(function (e) {
-            if ($(this).data("step") != $(this).data("order")) {
+            if ($(this).children('.dragbox').data('step') != $(this).data("order")) {
                 allcorrect = false
             }
         })

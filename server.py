@@ -175,7 +175,7 @@ questions = {
         "type": "order",
         "name": "Angled Parking",
         "steps": [["1", "Drive forward until the mirror lines up with the parking line", "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/angled_p1.gif?raw=true"],
-                  ["2", "Turn the wheel to your left and go forward into space",
+                  ["2", "Turn the wheel to your right and go forward into space",
                       "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/angled_p2.gif?raw=true"],
                   ["3", "Once you are centered in the spot, straighten the wheel and move up to the line ",
                       "https://github.com/tiffanymcbrayer/teaching_parking/blob/main/img/learnGifs/angled_p3.gif?raw=true"]],

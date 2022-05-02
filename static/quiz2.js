@@ -71,7 +71,9 @@ $(document).ready(function () {
 
         drop: function (event, ui) {
             $(ui.draggable).detach().css({ top: -0, left: -50 }).prependTo(this);
-            $(this).data("step", $(ui.draggable).data("step"));
+            if ($(this).children('.dragbox').length == 1) {
+                $(this).data("step", $(ui.draggable).data("step"));
+            }
             console.log(this)
             console.log("Data step " + $(this).data("step"));
             console.log("Data order " + $(ui.draggable).data("step"));

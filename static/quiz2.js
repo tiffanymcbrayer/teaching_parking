@@ -148,7 +148,7 @@ $(document).ready(function () {
         } else {
             submit_answer({ 'ans': 0 })
         }
-        window.location.href = '/quiz/' + (parseInt(ordnum) + 1).toString()
+        window.location.href = '/quiz/' + (parseInt(q_num) + 1).toString()
     });
 
 })

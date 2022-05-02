@@ -74,7 +74,7 @@ $(document).ready(function () {
         if (!question) {
             $('#goal').empty()
             $('#goal').append("<span class='stepNameQuiz'>Test your knowledge!</span>")
-            $('#question').append('<button class = "quizButtons" id="start">Start</button>')
+            $('#question').append('<button class = "mcButtons centeralign" id="start">Start</button>')
             hoverColor($("#start"))
 
             $('#start').click(function () {
@@ -87,7 +87,7 @@ $(document).ready(function () {
                 let choice = CHOICES[index]
                 $('#' + choice + "-img").append("<img class='img-fluid' src='" + this + "'></img>")
                 $('#' + choice + "-text").text(question['choice-text'][index])
-                $('#' + choice + "-button").append("<button id='" + choice + "'>" + choice + "</button>")
+                $('#' + choice + "-button").append("<button class='mcButtons' id='" + choice + "'>" + choice + "</button>")
             })
 
             $(document).on('click', '#A,#B,#C,#D', function (e) {

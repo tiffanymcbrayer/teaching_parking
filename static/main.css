@@ -23,12 +23,25 @@
   margin-top: 60px;
 }
 
+.topMarSmall {
+  margin-top: 10px;
+}
+
+.leftMar {
+  padding-left: 10px;
+}
 
 .next {
   margin-top: 200px;
 }
 
 .stepContainer {
+  background-color: white;
+  box-shadow: 20px 10px 10px rgb(72, 142, 191);
+  border: 2px solid rgb(65, 69, 92);
+}
+
+.mcContainer {
   background-color: white;
   box-shadow: 20px 10px 10px rgb(72, 142, 191);
   border: 2px solid rgb(65, 69, 92);
@@ -84,7 +97,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 60px;
+  margin-bottom: 10px;
 }
 
 .blockBackground {
@@ -239,12 +252,29 @@
   text-decoration: none;
 }
 
+.mcButtons {
+  background-color: rgb(72, 142, 191);
+  border: none;
+  color: white;
+  padding: 8px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px;
+  cursor: pointer;
+  border-style: solid;
+  border-width: 4px;
+  border-color: #f8f8ff;
+  border-radius: 15px;
+}
+
 .nextButtons {
   background-color: rgb(72, 142, 191);
   color: white;
   border-style: solid;
   border-width: 4px;
-  border-color: rgb(72, 142, 191);
+  border-color: white;
   border-radius: 10px;
   margin: 0px;
   font-size: 16px;
@@ -253,7 +283,7 @@
 }
 
 .quizButtons {
-  background-color: #007bff;
+  background-color: rgb(72, 142, 191);
   border: none;
   color: white;
   padding: 15px 32px;
@@ -310,7 +340,7 @@
 
 #badge-ribbon {
   position: relative;
-  background: #007bff;
+  background: rgb(72, 142, 191);
   height: 50px;
   width: 50px;
   border-radius: 50px;
@@ -410,7 +440,7 @@
 /* end of drag-drop quiz */
 
 .tipButtons {
-  background-color: #007bff;
+  background-color: rgb(72, 142, 191);
   border: none;
   color: white;
   padding: 15px 32px;
@@ -440,4 +470,9 @@
   padding-top: 30px;
   text-align: right !important;
   margin-right: 220px;
+}
+
+.progressQuiz {
+  font-weight: bold;
+  font-size: 20pt;
 }

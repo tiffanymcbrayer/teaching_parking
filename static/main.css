@@ -26,15 +26,15 @@
   background-color: rgb(72, 142, 191);
 }
 
-.base{
+.base {
   color: rgb(72, 142, 191);
 }
 
-.bk-accent{
+.bk-accent {
   background-color: #ffeb8a;
 }
 
-.accent{
+.accent {
   color: #ffeb8a;
 }
 
@@ -79,6 +79,7 @@
   font-size: 20px;
   font-weight: 500;
 }
+
 .goalTitle {
   padding-top: 25px;
   padding-bottom: 5px;
@@ -182,6 +183,7 @@
   margin-bottom: 10px;
   color: black;
 }
+
 .welcomeDesc {
   display: flex;
   justify-content: center;
@@ -462,6 +464,7 @@
 
 .overlay {
   /* position: absolute; */
+  /* border: 5px #ffeb8a dashed; */
   text-align: center;
   top: 0;
   bottom: 0;
@@ -474,8 +477,10 @@
 }
 
 .fullGif {
+  border: 5px #ffeb8a dashed;
+
   text-align: center;
-  height: 78px;
+  height: 304px;
 }
 
 .fullGif:hover .overlay {

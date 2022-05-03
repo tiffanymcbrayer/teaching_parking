@@ -23,9 +23,7 @@ function hoverColor(button) {
 }
 
 $(document).ready(function () {
-
     (function ($) {
-
         $.fn.randomize = function (childElem) {
             return this.each(function () {
                 var $this = $(this);
@@ -70,13 +68,14 @@ $(document).ready(function () {
         tolerance: 'pointer',
 
         drop: function (event, ui) {
-            $(ui.draggable).detach().css({ top: -0, left: -50 }).prependTo(this);
+            $(ui.draggable).detach().css({ top: -0, left: -0 }).prependTo(this);
             // if ($(this).children('.dragbox').length == 1) {
             //     $(this).data("step", $(ui.draggable).data("step"));
             // }
             // console.log(this)
             // console.log("Data step " + $(this).data("step"));
             // console.log("Data order " + $(ui.draggable).data("step"));
+            // $(this).css('background-color', '#FFEB8A')
         },
         over: function (event, ui) {
             $(this).css('background-color', '#ffd500')
@@ -159,4 +158,6 @@ $(document).ready(function () {
         window.location.href = '/quiz/' + (parseInt(q_num) + 1).toString()
     });
 
+    $(".fullGif").css("height", $(".hintgif").height() + ' !important');
+    console.log($(".hintgif").height());
 })

@@ -23,11 +23,11 @@
 }
 
 .bk-base {
-  background-color: rgb(72, 142, 191);
+  background-color: #2FBEFD;
 }
 
 .base {
-  color: rgb(72, 142, 191);
+  color: #2FBEFD;
 }
 
 .bk-accent {
@@ -118,17 +118,6 @@
   text-align: center;
 }
 
-/* .nameTitle {
-  margin-top: 20px;
-  font-size: 45px;
-  font-weight: bold;
-  color: #525252;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 60px;
-} */
-
 .nameTitleQuiz {
   margin-top: 20px;
   font-size: 45px;
@@ -149,29 +138,6 @@
   max-width: 100px;
   max-height: 100px;
 }
-
-
-
-
-/* .stepName {
-  padding-top: 60px;
-  font-size: 35px;
-  font-weight: bold;
-  justify-content: center;
-  color: #525252;
-  background-color: #f8f8ff;
-  width: 760px;
-  text-align: center;
-} */
-
-/* .stepExp {
-  font-size: 20px;
-  padding-top: 20px;
-  padding-bottom: 30px;
-  color: #525252;
-  background-color: #f8f8ff;
-  text-align: center;
-} */
 
 .welcomeInteractive {
   font-weight: bold;
@@ -205,7 +171,7 @@
 }
 
 .navbar {
-  background-color: rgb(72, 142, 191);
+  background-color: #2FBEFD;
   color: white
 }
 
@@ -244,14 +210,14 @@
 
 .iconHome {
   border: 2px solid rgb(65, 69, 92);
-  background-color: rgb(72, 142, 191);
+  background-color: #2FBEFD;
 }
 
 .startButton {
-  background-color: rgb(72, 142, 191);
+  background-color: #2FBEFD;
   border-style: solid;
   border-width: 10px;
-  border-color: rgb(72, 142, 191);
+  border-color: #2FBEFD;
   border-radius: 10px;
   font-size: 30px;
   width: 300px;
@@ -266,33 +232,12 @@
   background-color: white;
 }
 
-/* .startButton {
-  background-color: #007bff;
-  border-radius: 15px;
-  border: none;
-  color: white;
-  font-size: 25px;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-weight: bold;
-  margin: 4px;
-  cursor: pointer;
-  border-style: solid;
-  border-width: 4px;
-  border-color: #f8f8ff;
-  width: 500px;
-  height: 100px;
-  margin-top: 60px;
-} */
-
 .prevButtons {
-  background-color: rgb(72, 142, 191);
+  background-color: #2FBEFD;
   color: #ffeb8a;
   border-style: solid;
   border-width: 4px;
-  border-color: rgb(72, 142, 191);
+  border-color: #2FBEFD;
   border-radius: 10px;
   font-size: 16px;
   width: 130px;
@@ -300,7 +245,7 @@
 }
 
 .mcButtons {
-  background-color: rgb(72, 142, 191);
+  background-color: #2FBEFD;
   border: none;
   color: #ffeb8a;
   padding: 8px 15px;
@@ -317,7 +262,7 @@
 }
 
 .nextButtons {
-  background-color: rgb(72, 142, 191);
+  background-color: #2FBEFD;
   color: #ffeb8a;
   border-style: solid;
   border-width: 4px;
@@ -330,7 +275,7 @@
 }
 
 .quizButtons {
-  background-color: rgb(72, 142, 191);
+  background-color: r#2FBEFD;
   border: none;
   color: #ffeb8a;
   padding: 15px 32px;
@@ -372,7 +317,7 @@
   width: 100%;
   opacity: 1;
   transition: .5s ease;
-  background-color: #008CBA;
+  background-color: #2FBEFD;
 }
 
 .bluebox {
@@ -381,13 +326,13 @@
   /* width: 150px; */
   /* height: 80px; */
   border: 1px solid lightgray;
-  background-color: #008CBA;
+  background-color: #2FBEFD;
 }
 
 
 #badge-ribbon {
   position: relative;
-  background: rgb(72, 142, 191);
+  background: #2FBEFD;
   height: 50px;
   width: 50px;
   border-radius: 50px;
@@ -421,9 +366,7 @@
 }
 
 .namebox {
-  /* border: 1px solid lightgray; */
   vertical-align: middle;
-  /* text-align: center; */
   padding-left: 0px;
   margin-right: 0px;
   width: 100%;
@@ -434,9 +377,6 @@
   width: 85%;
   text-align: left !important;
   vertical-align: top;
-  /* margin-left: 25px; */
-  /* margin-right: 25px; */
-
 }
 
 .dropbox {
@@ -493,7 +433,7 @@
 /* end of drag-drop quiz */
 
 .tipButtons {
-  background-color: rgb(72, 142, 191);
+  background-color: #2FBEFD;
   border: none;
   color: white;
   padding: 15px 32px;

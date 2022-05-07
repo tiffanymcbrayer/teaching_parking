@@ -58,8 +58,8 @@ $(document).ready(function () {
     }
     if (end_quiz == 1) {
         $('#goal').empty()
-        $('#goal').append("<span class='stepNameQuiz'>Score: " + response["score"] + "/" + QUIZ_NUM + "</span>")
-        $('#question').append("<button class = 'quizButtons' id='restart'>Try Again</button>")
+        $('#goal').append("<div class='col-md-6'></div><div class='col-md-4'> <span class='stepNameQuiz'>Score: " + response["score"] + "/" + QUIZ_NUM + "</span> </div>")
+        $('#question').append("<div class='col-md-5'></div><button class = 'quizButtons' id='restart'>Try Again</button>")
         hoverColor($("#restart"))
         $(document).on('click', '#restart', function (e) {
             window.location.href = '/quiz/0'
@@ -74,8 +74,8 @@ $(document).ready(function () {
     } else {
         if (!question) {
             $('#goal').empty()
-            $('#goal').append("<span class='stepNameQuiz'>Test your knowledge!</span>")
-            $('#question').append('<button class = "mcButtons centeralign" id="start">Start</button>')
+            $('#goal').append("<div class='col-md-5'></div><div class='col-md-5'> <span class='stepNameQuiz'>Test your knowledge!</span> </div>")
+            $('#question').append("<div class='col-md-6'></div> <button class = 'mcButtons centeralign' id='start'>Start</button>")
             hoverColor($("#start"))
 
             $('#start').click(function () {

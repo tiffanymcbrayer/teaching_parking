@@ -214,10 +214,9 @@
 }
 
 .startButton {
-  background-color: #2FBEFD;
+  border-color: #ffeb8a;
   border-style: solid;
   border-width: 10px;
-  border-color: #2FBEFD;
   border-radius: 10px;
   font-size: 30px;
   width: 300px;
@@ -233,11 +232,11 @@
 }
 
 .prevButtons {
-  background-color: #2FBEFD;
-  color: #ffeb8a;
+  background-color: #ffeb8a;
+  color: #2FBEFD;
   border-style: solid;
   border-width: 4px;
-  border-color: #2FBEFD;
+  border-color: #ffeb8a;
   border-radius: 10px;
   font-size: 16px;
   width: 130px;
@@ -245,9 +244,9 @@
 }
 
 .mcButtons {
-  background-color: #2FBEFD;
+  background-color: #ffeb8a;
   border: none;
-  color: #ffeb8a;
+  color: #2FBEFD;
   padding: 8px 15px;
   text-align: center;
   text-decoration: none;
@@ -262,8 +261,8 @@
 }
 
 .nextButtons {
-  background-color: #2FBEFD;
-  color: #ffeb8a;
+  background-color: #ffeb8a;
+  color: #2FBEFD;
   border-style: solid;
   border-width: 4px;
   border-color: white;
@@ -275,9 +274,9 @@
 }
 
 .quizButtons {
-  background-color: r#2FBEFD;
+  background-color: #ffeb8a;
   border: none;
-  color: #ffeb8a;
+  color: #2FBEFD;
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
@@ -332,7 +331,7 @@
 
 #badge-ribbon {
   position: relative;
-  background: #2FBEFD;
+  background-color: #ffeb8a;
   height: 50px;
   width: 50px;
   border-radius: 50px;
@@ -360,7 +359,8 @@
 .ordernum {
   font-size: larger;
   font-weight: bold;
-  color: white;
+  /* background-color: #ffeb8a !important; */
+  color: #2FBEFD !important;
   margin-left: 15px;
   margin-top: 30px !important;
 }

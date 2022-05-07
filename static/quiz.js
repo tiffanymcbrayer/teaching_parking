@@ -13,10 +13,10 @@ var dict = {
 
 function hoverColor(button){
     $(button).mouseover(function(){
-        button.css('background-color', '#77b5fe'); //how to change back after?
+        button.css('background-color', '#ffd500'); //how to change back after?
     });
     button.mouseout(function(){
-        button.css('background-color', '#2FBEFD'); //how to change back after?
+        button.css('background-color', '#ffeb8a'); //how to change back after?
     });
 }
 

@@ -13,12 +13,12 @@ var score = 0;
 
 var orders = []
 
-function hoverColor(button) {
-    $(button).mouseover(function () {
-        button.css('background-color', '#77b5fe'); //how to change back after?
+function hoverColor(button){
+    $(button).mouseover(function(){
+        button.css('background-color', '#ffd500'); //how to change back after?
     });
-    button.mouseout(function () {
-        button.css('background-color', '#2FBEFD'); //how to change back after?
+    button.mouseout(function(){
+        button.css('background-color', '#ffeb8a'); //how to change back after?
     });
 }
 
@@ -44,10 +44,12 @@ $(document).ready(function () {
     $('.detailsdiv').randomize('.dropbox');
 
     $('.dragbox').hover(function () {
-        $(this).css('background-color', 'orange')
+        $(this).css('background-color', '#ffd500')
+        $(this).css('color', '#2FBEFD')
         $(this).css('cursor', 'move')
     }, function () {
-        $(this).css('background-color', '#2FBEFD')
+        $(this).css('background-color', '#ffeb8a')
+        $(this).css('color', '#2FBEFD')
         $(this).css('cursor', 'default')
     })
     $('.dragbox').draggable({
@@ -56,10 +58,13 @@ $(document).ready(function () {
         start: function (event, ui) {
             console.log($(this).data('from'))
             $('.dropbox').css('background-color', '#FFEB8A')
+            $(this).css('color', '#2FBEFD')
+            $(this).css('background-color', '#ffeb8a')
         },
         stop: function (event, ui) {
             $('.dropbox').css('background-color', 'darkgray')
-            $(this).css('background-color', '#2FBEFD')
+            $(this).css('background-color', '#ffeb8a')
+            $(this).css('color', '#2FBEFD')
             $(this).css('cursor', 'default')
         },
     });

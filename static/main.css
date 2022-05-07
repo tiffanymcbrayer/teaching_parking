@@ -469,3 +469,7 @@
   font-weight: bold;
   font-size: 20pt;
 }
+
+.correctChoice{
+  border: 5px solid green;
+}

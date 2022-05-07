@@ -18,7 +18,7 @@ function hoverColor(button) {
         button.css('background-color', '#77b5fe'); //how to change back after?
     });
     button.mouseout(function () {
-        button.css('background-color', '#007bff'); //how to change back after?
+        button.css('background-color', '#2FBEFD'); //how to change back after?
     });
 }
 
@@ -47,7 +47,7 @@ $(document).ready(function () {
         $(this).css('background-color', 'orange')
         $(this).css('cursor', 'move')
     }, function () {
-        $(this).css('background-color', 'rgb(72, 142, 191)')
+        $(this).css('background-color', '#2FBEFD')
         $(this).css('cursor', 'default')
     })
     $('.dragbox').draggable({
@@ -59,7 +59,7 @@ $(document).ready(function () {
         },
         stop: function (event, ui) {
             $('.dropbox').css('background-color', 'darkgray')
-            $(this).css('background-color', 'rgb(72, 142, 191)')
+            $(this).css('background-color', '#2FBEFD')
             $(this).css('cursor', 'default')
         },
     });

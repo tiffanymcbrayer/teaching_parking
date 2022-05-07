@@ -16,7 +16,7 @@ function hoverColor(button){
         button.css('background-color', '#77b5fe'); //how to change back after?
     });
     button.mouseout(function(){
-        button.css('background-color', 'rgb(72, 142, 191)'); //how to change back after?
+        button.css('background-color', '#2FBEFD'); //how to change back after?
     });
 }
 
@@ -36,9 +36,10 @@ $(document).ready(function () {
                 } else {
                     $('#' + dict[c["choice"]]).css("background-color", "red")
                 }
-
+                $('#'+dict[result["correct_ans"]]+"-img").empty()
                 $('#answer').append("<span class='stepNameQuiz'>Correct answer is " + dict[result["correct_ans"]] + "</span>")
-                $('#answer-img').append("<img src='" + result["correct_img"] + "' class='img-fluid'>")
+                $('#'+dict[result["correct_ans"]]+"-img").append("<img class='correctChoice img-fluid' src='" + result["correct_img"] + "'>")
+                $('#'+dict[result["correct_ans"]]).css("border", "5px dashed green")
                 if((parseInt(q_num) + 1).toString()==6){
                    $('#next-button').append("<button class = 'quizButtons' id='next'>See Results</button>") 
                 }

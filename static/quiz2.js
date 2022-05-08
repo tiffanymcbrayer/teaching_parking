@@ -15,10 +15,29 @@ var orders = []
 
 function hoverColor(button){
     $(button).mouseover(function(){
-        button.css('background-color', '#ffd500'); //how to change back after?
+        button.css('background-color', '#2FBEFD'); //how to change back after?
+        button.css('border-color', '#ffeb8a');
+        button.css('color', '#ffeb8a');
     });
     button.mouseout(function(){
         button.css('background-color', '#ffeb8a'); //how to change back after?
+        button.css('border-color', '#2FBEFD');
+        button.css('color', '#2FBEFD');
+    });
+}
+
+function hoverColor2(button){
+    $(button).mouseover(function(){
+        button.css('background-color', '#C0C0C0'); //how to change back after?
+        button.css('border-color', 'black');
+        button.css('color', 'black');
+        button.css('cursor', 'not-allowed');
+    });
+    button.mouseout(function(){
+        button.css('background-color', '#C0C0C0');//how to change back after?
+        button.css('border-color', 'black');
+        button.css('color', 'black');
+        button.css('cursor', 'default');
     });
 }
 
@@ -39,7 +58,7 @@ $(document).ready(function () {
             });
         }
     })(jQuery);
-
+    hoverColor($("#showresult"))
     // $('.stepsdiv').randomize('.namebox');
     $('.detailsdiv').randomize('.dropbox');
 
@@ -123,6 +142,7 @@ $(document).ready(function () {
         })
         console.log("Page " + ordnum)
         if (pass) {
+            hoverColor2($("#showresult"))
             if ($('#next').length == 0) {
                 $('.buttons').append("<button class='quizButtons' id='next'>Next Question</button>")
                 hoverColor($("#next"))

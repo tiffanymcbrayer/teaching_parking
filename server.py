@@ -78,7 +78,7 @@ questions = {
     "1": {
         "type": "mc",
         "goal": "Park forwards",
-        "question": "In the first step, how should driver align the car?",
+        "question": "In the first step, how should the driver align the car?",
         "question-img": "",
         "choice-num": 3,
         "choice-text": ["", "", ""],
@@ -91,7 +91,7 @@ questions = {
     "2": {
         "type": "mc",
         "goal": "Park backwards",
-        "question": "In the second step before turn the wheel left and move forward, how should the driver align the car?",
+        "question": "In the second step before turning the wheel left and move forward, how should the driver align the car?",
         "question-img": "",
         "choice-num": 4,
         "choice-text": ["", "", "", ""],

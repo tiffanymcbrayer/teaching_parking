@@ -13,10 +13,14 @@ var dict = {
 
 function hoverColor(button){
     $(button).mouseover(function(){
-        button.css('background-color', '#ffd500'); //how to change back after?
+        button.css('background-color', '#2FBEFD'); //how to change back after?
+        button.css('border-color', '#ffeb8a');
+        button.css('color', '#ffeb8a');
     });
     button.mouseout(function(){
         button.css('background-color', '#ffeb8a'); //how to change back after?
+        button.css('border-color', '#2FBEFD');
+        button.css('color', '#2FBEFD');
     });
 }
 
@@ -39,7 +43,7 @@ $(document).ready(function () {
                 $('#'+dict[result["correct_ans"]]+"-img").empty()
                 $('#answer').append("<span class='stepNameQuiz'>Correct answer is " + dict[result["correct_ans"]] + "</span>")
                 $('#'+dict[result["correct_ans"]]+"-img").append("<img class='correctChoice img-fluid' src='" + result["correct_img"] + "'>")
-                $('#'+dict[result["correct_ans"]]).css("border", "5px dashed green")
+                $('#'+dict[result["correct_ans"]]).css("border", "5px solid green")
                 if((parseInt(q_num) + 1).toString()==6){
                    $('#next-button').append("<button class = 'quizButtons' id='next'>See Results</button>") 
                 }

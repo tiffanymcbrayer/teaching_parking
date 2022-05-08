@@ -48,7 +48,7 @@
 
 
 .topMar {
-  margin-top: 60px;
+  margin-top: 40px;
 }
 
 .topMarSmall {
@@ -78,14 +78,14 @@
   padding-top: 25px;
   padding-bottom: 25px;
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 700;
 }
 
 .goalTitle {
   padding-top: 25px;
   padding-bottom: 5px;
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 700;
 }
 
 .selectTitle {
@@ -113,6 +113,11 @@
   text-align: center;
 
 }
+
+.stepDetail{
+  font-size: 18px;
+}
+
 
 .gif {
   width: 30%;
@@ -215,9 +220,9 @@
 }
 
 .startButton {
-  border-color: #ffeb8a;
+  border-color: #2FBEFD;
   border-style: solid;
-  border-width: 10px;
+  border-width: 2px;
   border-radius: 10px;
   font-size: 30px;
   width: 300px;
@@ -236,12 +241,27 @@
   background-color: #ffeb8a;
   color: #2FBEFD;
   border-style: solid;
-  border-width: 4px;
-  border-color: #ffeb8a;
+  border-width: 2px;
+  border-color: #2FBEFD;
   border-radius: 10px;
   font-size: 16px;
   width: 130px;
   text-decoration: none;
+  height: 80px;
+  font-weight: 500;
+}
+
+.prev1{
+  margin-right: 20px;
+}
+
+.next1{
+  margin-left: 50px;
+}
+
+.question{
+  font-size: 18px;
+  margin-top: 10px;
 }
 
 .mcButtons {
@@ -256,8 +276,8 @@
   margin: 4px;
   cursor: pointer;
   border-style: solid;
-  border-width: 4px;
-  border-color: #ffeb8a;
+  border-width: 2px;
+  border-color: #2FBEFD;
   border-radius: 15px;
 }
 
@@ -265,18 +285,18 @@
   background-color: #ffeb8a;
   color: #2FBEFD;
   border-style: solid;
-  border-width: 4px;
-  border-color: white;
+  border-width: 2px;
+  border-color: #2FBEFD;
   border-radius: 10px;
   margin: 0px;
   font-size: 16px;
   width: 130px;
   text-decoration: none;
+  height: 80px;
 }
 
 .quizButtons {
   background-color: #ffeb8a;
-  border: none;
   color: #2FBEFD;
   padding: 15px 32px;
   text-align: center;
@@ -286,9 +306,10 @@
   margin: 4px;
   cursor: pointer;
   border-style: solid;
-  border-width: 4px;
-  border-color: #f8f8ff;
+  border-width: 2px;
+  border-color: #2FBEFD;
   border-radius: 15px;
+  font-weight: 500;
 }
 
 /*drag-drop quiz styles*/
@@ -378,6 +399,7 @@
   width: 85%;
   text-align: left !important;
   vertical-align: top;
+  padding-left: 10px;
 }
 
 .dropbox {
@@ -385,7 +407,7 @@
   /* vertical-align: middle !important; */
   /* text-align: right; */
   border: 1px solid lightgray;
-  background-color: darkgray;
+  background-color: #C0C0C0;
   /* width: 100%; */
   /* padding-left: 30px; */
   /* margin-right: 40px; */
@@ -445,7 +467,7 @@
   margin: 4px;
   cursor: pointer;
   border-style: solid;
-  border-width: 4px;
+  border-width: 2px;
   border-color: #f8f8ff;
   border-radius: 15px;
 }

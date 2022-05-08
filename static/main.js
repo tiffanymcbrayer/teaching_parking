@@ -33,12 +33,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function hoverColor(button){
     $(button).mouseover(function(){
-        button.css('background-color', '#ffd500'); //how to change back after?
-        button.css('border-style', 'dashed');
+        button.css('background-color', '#2FBEFD'); //how to change back after?
+        button.css('border-color', '#ffeb8a');
+        button.css('color', '#ffeb8a');
     });
     button.mouseout(function(){
         button.css('background-color', '#ffeb8a'); //how to change back after?
-        button.css('border-style', 'solid');
+        button.css('border-color', '#2FBEFD');
+        button.css('color', '#2FBEFD');
     });
 }
 
